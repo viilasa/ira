@@ -1159,10 +1159,11 @@ button {
 /* ── Kasauli landscape illustration — inside .arrival, right side ── */
 .arrival__illus {
   position: absolute;
-  bottom: 20px;      /* ← nudge up: more positive = higher */
+  bottom: 20px;
   right: 0;
-  width: 80%;        /* ← ADJUST THIS to make illustration bigger/smaller */
+  width: 80%;
   height: auto;
+  max-width: none;
   pointer-events: none;
   z-index: 1;
 }
@@ -1891,6 +1892,17 @@ img.lifestyle-slide__graphic {
 }
 .sustain-card__para:last-child { margin-bottom: 0; }
 
+/* Preview block — hidden on desktop */
+.sustain-card__visible-preview { display: none; }
+
+/* Read More expandable — desktop: always open, no toggle */
+.sustain-card__expandable { display: contents; }
+.sustain-card__readmore { display: none; }
+
+/* Duplicate heading/para inside expandable — always visible on desktop */
+.sustain-card__heading--desktop { display: block; }
+.sustain-card__para--first-desktop { display: block; }
+
 /* Illustration placeholder — right of intro copy */
 .sustain-card__intro-graphic {
   width: 100%;
@@ -2131,7 +2143,7 @@ div.sitemap-slide__img {
 
 .sitemap-bar__label {
   font-family: var(--font-display);
-  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
   font-style: italic;
   font-weight: 400;
   color: var(--gold);
@@ -2566,9 +2578,15 @@ div.sitemap-slide__img {
 
 /* Monkey illustration placeholder */
 .footer-monkey {
-  width: 80px;
-  height: 80px;
-  /* background-image: url('...') when asset ready */
+  width: 100%;
+  max-width: 280px;
+  margin-inline: auto;
+}
+.footer-monkey img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .footer-address {
@@ -2788,10 +2806,17 @@ div.sitemap-slide__img {
   .overview__signoff { font-size: 1rem; }
 
   /* ── Arrival ── */
-  .arrival { min-height: 420px; padding-top: 40px; padding-bottom: 0; }
-  .arrival__heading { font-size: clamp(1.4rem, 5.5vw, 1.9rem); max-width: 180px; }
-  .arrival__illus { width: 95%; bottom: 0; right: -5%; }
-  .birds-scatter { display: none; }
+  .arrival { min-height: 90vh; padding-top: 120px; padding-bottom: 0; }
+  .arrival .container { display: flex; justify-content: center; }
+  .arrival__heading {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    max-width: 100%;
+    text-align: center;
+    margin-inline: auto;
+  }
+  .arrival__illus { width: 130%; bottom: 90px; right: -5%; left: auto; max-width: none; }
+  .birds-scatter { display: block; }
+  .bird { width: 20px; height: 10px; }
 
   /* ── Kasauli intro ── */
   .kasauli-intro { padding-block: 56px; }
@@ -2836,9 +2861,10 @@ div.sitemap-slide__img {
   .video-section__frame-wrap { width: 100%; }
 
   /* ── Lifestyle slider ── */
-  .lifestyle-section { padding-block: 24px 40px; }
-  .lifestyle-swiper { width: 100%; }
-  img.lifestyle-slide__graphic { height: 55vh; }
+  .lifestyle-section { padding-block: 0; }
+  .lifestyle-swiper { width: 100%; padding-bottom: 48px !important; }
+  .lifestyle-slide { width: 100vw; }
+  img.lifestyle-slide__graphic { width: 100vw; height: auto; max-width: none; object-fit: fill; display: block; }
   .lifestyle-swiper__prev { left: 8px !important; }
   .lifestyle-swiper__next { right: 8px !important; }
   .lifestyle-swiper__prev::after,
@@ -2850,13 +2876,102 @@ div.sitemap-slide__img {
 
   /* ── Amenities ── */
   .amenities { padding-block: 0; }
-  .sustain-card { width: 100%; padding: 40px 20px; gap: 36px; border-radius: 0; }
-  .sustain-card__heading { font-size: clamp(1.5rem, 5.5vw, 2rem); }
-  .sustain-card__intro { grid-template-columns: 1fr; gap: 24px; }
-  .sustain-card__intro-graphic { display: block; order: -1; }
-  .sustain-card__intro-graphic img { max-width: 200px; margin-inline: auto; }
-  .sustain-card__para { font-size: 0.88rem; }
-  .sustain-card__features { grid-template-columns: 1fr; gap: 28px; }
+  .sustain-card { width: 100%; padding: 0; gap: 0; border-radius: 0; min-height: 0; }
+
+  /* Preview card — visible on mobile */
+  .sustain-card__visible-preview {
+    display: block;
+    background-color: var(--ivory);
+    border-radius: 4px;
+    padding: 28px 20px 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .sustain-card__preview-inner {
+    display: flex;
+    align-items: flex-end;
+    gap: 0;
+    position: relative;
+  }
+  .sustain-card__preview-copy {
+    flex: 1;
+    padding-bottom: 24px;
+  }
+  .sustain-card__visible-preview .sustain-card__heading {
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
+    margin-bottom: 16px;
+    opacity: 1;
+    transform: none;
+  }
+  .sustain-card__visible-preview .sustain-card__para {
+    font-size: 0.85rem;
+    line-height: 1.75;
+    margin-bottom: 12px;
+  }
+  .sustain-card__preview-illus {
+    flex-shrink: 0;
+    width: 110px;
+    align-self: flex-end;
+  }
+  .sustain-card__preview-illus img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  /* Hide duplicate heading + first paras + graphic inside expandable on mobile */
+  .sustain-card__heading--desktop { display: none; }
+  .sustain-card__para--first-desktop { display: none; }
+  .sustain-card__intro { display: block; }
+  .sustain-card__intro-graphic { display: none; }
+
+  /* Read More button */
+  .sustain-card__readmore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: none;
+    border-top: 1px solid var(--sand);
+    background: var(--ivory);
+    padding: 16px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .sustain-card__readmore::after {
+    content: '↓';
+    transition: transform 0.3s ease;
+  }
+  .sustain-card__readmore[aria-expanded="true"]::after {
+    content: '↑';
+  }
+
+  /* Expandable text — collapsed by default */
+  .sustain-card__expandable {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.6s ease;
+    padding: 0;
+  }
+  .sustain-card__expandable.is-open {
+    max-height: 3000px;
+    padding: 32px 20px 40px;
+  }
+
+  .sustain-card__heading { font-size: clamp(1.5rem, 5.5vw, 2rem); margin-bottom: 24px; }
+  .sustain-card__intro { display: block; }
+  .sustain-card__intro-graphic { display: none; }
+  .sustain-card__para { font-size: 0.88rem; margin-bottom: 14px; }
+  .sustain-card__features { grid-template-columns: 1fr; gap: 28px; margin-top: 32px; }
   .sustain-card__feature-title { font-size: 1.05rem; }
   .sustain-card__feature-body { font-size: 0.85rem; }
   .sustain-card__feature-illus { justify-content: center; }
@@ -2864,13 +2979,13 @@ div.sitemap-slide__img {
 
   /* ── Location / Companions ── */
   .companions { grid-template-columns: 1fr; min-height: auto; }
-  .companions__copy { padding: 48px 20px 28px; max-width: 100%; }
-  .companions__heading { font-size: 1.85rem; margin-bottom: 24px; }
-  .companions__sublead { font-size: 0.95rem; margin-bottom: 32px; }
+  .companions__copy { padding: 48px 20px 20px; max-width: 100%; }
+  .companions__heading { font-size: 1.85rem; margin-bottom: 20px; }
+  .companions__sublead { font-size: 0.95rem; margin-bottom: 24px; }
   .companions__body { padding-left: 0; }
   .companions__para { font-size: 0.85rem; line-height: 1.8; }
-  .companions__illus { position: static; width: 100%; height: auto; padding: 0 20px 40px; }
-  .companions__illus img { width: 100%; height: auto; max-height: 320px; object-fit: contain; object-position: center; margin-left: 0; }
+  .companions__illus { position: static; width: 100%; height: auto; padding: 0; margin-top: -10px; }
+  .companions__illus img { width: 115%; height: auto; max-height: none; max-width: none; object-fit: contain; object-position: center bottom; margin-left: -8%; }
 
   /* ── Sitemap ── */
   .sitemap-section { padding-block: 48px 36px; }
@@ -2878,7 +2993,7 @@ div.sitemap-slide__img {
   .sitemap-slide { padding: 12px 0; }
   .sitemap-slide__img { height: 220px; }
   .sitemap-bar { width: 92%; margin-top: 16px; padding-block: 14px 0; }
-  .sitemap-bar__label { font-size: 0.9rem; }
+  .sitemap-bar__label { font-size: 1.3rem; }
 
   /* ── Specs ── */
   .specs-section { padding-block: 48px 36px; }

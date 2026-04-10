@@ -133,7 +133,7 @@
       <div class="hero__media">
         <video
           class="hero__video"
-          src="https://res.cloudinary.com/ddhhlkyut/video/upload/q_auto/f_auto/v1775594907/Discover_Goa_Beaches_Hidden_Treasures_and_Vibrant_Adventures_Goa_Cinematic_Travel_Video_-_Zuckolli_824p_hm6pz0.mp4"
+          src="https://res.cloudinary.com/ddhhlkyut/video/upload/v1775827094/Discover_Goa_Beaches_-_i_824p_-_Trim_hum5qk.mp4"
           poster="hero-poster.jpg"
           autoplay
           muted
@@ -553,93 +553,132 @@
     <section id="amenities" class="amenities">
       <div class="sustain-card">
 
-        <!-- Heading -->
-        <h2 class="sustain-card__heading reveal">
-          Every detail considered.<br>Every comfort crafted.
-        </h2>
-
-        <!-- Intro grid: left copy + right illustration placeholder -->
-        <div class="sustain-card__intro">
-          <div class="sustain-card__intro-copy">
-            <p class="sustain-card__para reveal">
-              At IRA Estates, we believe that true luxury lies in the
-              details — the quality of a door handle, the weight of a
-              tap, the texture of a wall. Every element in Nirvana
-              Mansion has been curated with that conviction.
-            </p>
-            <p class="sustain-card__para reveal" data-delay="0.1">
-              From Kohler and Jaguar sanitaryware to Legrand electrical
-              systems and Jindal Steel structures, we partner only with
-              brands that share our commitment to lasting excellence.
-            </p>
-            <p class="sustain-card__para reveal" data-delay="0.2">
-              The result is a home that not only looks exceptional on
-              the day you move in — but continues to feel exceptional
-              decades into the future.
-            </p>
-          </div>
-          <div class="sustain-card__intro-graphic reveal" data-delay="0.1">
-            <img
-              src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775809257/-goan-portuguese_b7evq2.svg"
-              alt="Goan Portuguese architecture illustration"
-              loading="lazy"
-              decoding="async"
-            >
+        <!-- Always visible on mobile: heading + text + small corner illustration -->
+        <div class="sustain-card__visible-preview">
+          <div class="sustain-card__preview-inner">
+            <div class="sustain-card__preview-copy">
+              <h2 class="sustain-card__heading reveal">
+                Every detail considered.<br>Every comfort crafted.
+              </h2>
+              <p class="sustain-card__para reveal">
+                At IRA Estates, we believe that true luxury lies in the
+                details — the quality of a door handle, the weight of a
+                tap, the texture of a wall. Every element in Nirvana
+                Mansion has been curated with that conviction.
+              </p>
+              <p class="sustain-card__para reveal">
+                From Kohler and Jaguar sanitaryware to Legrand electrical
+                systems and Jindal Steel structures, we partner only with
+                brands that share our commitment to lasting excellence.
+              </p>
+            </div>
+            <div class="sustain-card__preview-illus">
+              <img
+                src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775809257/-goan-portuguese_b7evq2.svg"
+                alt="Goan Portuguese architecture illustration"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
           </div>
         </div>
 
-        <!-- Features grid: 2 columns -->
-        <div class="sustain-card__features reveal-group">
+        <!-- Read More toggle — only visible on mobile -->
+        <button class="sustain-card__readmore" id="amenitiesToggle" aria-expanded="false" aria-controls="amenitiesExpand">
+          Read More
+        </button>
 
-          <div class="sustain-card__feature reveal-item">
-            <h3 class="sustain-card__feature-title">Private Pool &amp; Landscaped Gardens</h3>
-            <p class="sustain-card__feature-body">
-              Each villa is gifted its own private swimming pool and
-              individually landscaped garden — a personal sanctuary
-              designed for relaxation, entertaining, and the quiet
-              pleasures of Goa living.
-            </p>
+        <!-- Rest of content — hidden on mobile until expanded -->
+        <div class="sustain-card__expandable" id="amenitiesExpand">
+
+          <!-- Heading (desktop only — hidden on mobile, shown in preview above) -->
+          <h2 class="sustain-card__heading reveal sustain-card__heading--desktop">
+            Every detail considered.<br>Every comfort crafted.
+          </h2>
+
+          <!-- Intro grid: copy left, illustration right (desktop layout) -->
+          <div class="sustain-card__intro">
+            <div class="sustain-card__intro-copy">
+              <p class="sustain-card__para reveal sustain-card__para--first-desktop">
+                At IRA Estates, we believe that true luxury lies in the
+                details — the quality of a door handle, the weight of a
+                tap, the texture of a wall. Every element in Nirvana
+                Mansion has been curated with that conviction.
+              </p>
+              <p class="sustain-card__para reveal" data-delay="0.1">
+                From Kohler and Jaguar sanitaryware to Legrand electrical
+                systems and Jindal Steel structures, we partner only with
+                brands that share our commitment to lasting excellence.
+              </p>
+              <p class="sustain-card__para reveal" data-delay="0.2">
+                The result is a home that not only looks exceptional on
+                the day you move in — but continues to feel exceptional
+                decades into the future.
+              </p>
+            </div>
+            <div class="sustain-card__intro-graphic reveal" data-delay="0.1">
+              <img
+                src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775809257/-goan-portuguese_b7evq2.svg"
+                alt="Goan Portuguese architecture illustration"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
           </div>
 
-          <div class="sustain-card__feature reveal-item">
-            <h3 class="sustain-card__feature-title">Premium Interiors &amp; Fittings</h3>
-            <p class="sustain-card__feature-body">
-              Kohler and Jaguar sanitaryware, Legrand modular switches,
-              UPVC Fenesta windows, and Jindal Steel structural elements
-              are standard across all villas.
-            </p>
-            <p class="sustain-card__feature-body" style="margin-top:12px">
-              Italian marble and premium stone flooring, modular kitchens
-              with hob and chimney, and ambient mood lighting complete
-              the picture of understated luxury.
-            </p>
-          </div>
+          <!-- Features grid -->
+          <div class="sustain-card__features reveal-group">
 
-          <div class="sustain-card__feature reveal-item">
-            <h3 class="sustain-card__feature-title">4 BHK · Spacious &amp; Airy</h3>
-            <p class="sustain-card__feature-body">
-              Each villa offers four generously proportioned bedrooms,
-              multiple living areas, and outdoor terraces designed to
-              blur the line between inside and the Goa outdoors.
-            </p>
-            <p class="sustain-card__feature-body" style="margin-top:12px">
-              High ceilings, cross-ventilation, and thoughtful orientation
-              ensure every room stays cool, bright, and connected to the
-              natural world around it.
-            </p>
-          </div>
+            <div class="sustain-card__feature reveal-item">
+              <h3 class="sustain-card__feature-title">Private Pool &amp; Landscaped Gardens</h3>
+              <p class="sustain-card__feature-body">
+                Each villa is gifted its own private swimming pool and
+                individually landscaped garden — a personal sanctuary
+                designed for relaxation, entertaining, and the quiet
+                pleasures of Goa living.
+              </p>
+            </div>
 
-          <!-- Bottom-right: woman illustration -->
-          <div class="sustain-card__feature-illus reveal-item">
-            <img
-              src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775812560/a-minimal-luxury-illustration-of-a-graceful-woman-_joru8c.svg"
-              alt="Luxury lifestyle illustration"
-              loading="lazy"
-              decoding="async"
-            >
-          </div>
+            <div class="sustain-card__feature reveal-item">
+              <h3 class="sustain-card__feature-title">Premium Interiors &amp; Fittings</h3>
+              <p class="sustain-card__feature-body">
+                Kohler and Jaguar sanitaryware, Legrand modular switches,
+                UPVC Fenesta windows, and Jindal Steel structural elements
+                are standard across all villas.
+              </p>
+              <p class="sustain-card__feature-body" style="margin-top:12px">
+                Italian marble and premium stone flooring, modular kitchens
+                with hob and chimney, and ambient mood lighting complete
+                the picture of understated luxury.
+              </p>
+            </div>
 
-        </div><!-- /.sustain-card__features -->
+            <div class="sustain-card__feature reveal-item">
+              <h3 class="sustain-card__feature-title">4 BHK · Spacious &amp; Airy</h3>
+              <p class="sustain-card__feature-body">
+                Each villa offers four generously proportioned bedrooms,
+                multiple living areas, and outdoor terraces designed to
+                blur the line between inside and the Goa outdoors.
+              </p>
+              <p class="sustain-card__feature-body" style="margin-top:12px">
+                High ceilings, cross-ventilation, and thoughtful orientation
+                ensure every room stays cool, bright, and connected to the
+                natural world around it.
+              </p>
+            </div>
+
+            <!-- Bottom-right: woman illustration -->
+            <div class="sustain-card__feature-illus reveal-item">
+              <img
+                src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775812560/a-minimal-luxury-illustration-of-a-graceful-woman-_joru8c.svg"
+                alt="Luxury lifestyle illustration"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+
+          </div><!-- /.sustain-card__features -->
+        </div><!-- /.sustain-card__expandable -->
 
       </div><!-- /.sustain-card -->
     </section>
@@ -920,8 +959,10 @@
     <div class="footer-main">
       <p class="footer-main__tagline reveal">Reach out to us for a personal conversation about Nirvana Mansion.</p>
 
-      <!-- Monkey illustration placeholder -->
-      <div class="footer-monkey" aria-label="Tropical Goa illustration placeholder"></div>
+      <!-- Footer illustration -->
+      <div class="footer-monkey">
+        <img src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775636686/leaves_hwhm2k.svg" alt="IRA Estates illustration" loading="lazy" decoding="async">
+      </div>
 
       <!-- Address block -->
       <address class="footer-address reveal">

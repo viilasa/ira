@@ -575,6 +575,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Gallery fade ----
   try { initGalleryFade(); } catch (e) {}
 
+  // ---- Amenities Read More (mobile only) ----
+  const amenitiesToggle = document.getElementById('amenitiesToggle');
+  const amenitiesExpand = document.getElementById('amenitiesExpand');
+  if (amenitiesToggle && amenitiesExpand) {
+    amenitiesToggle.addEventListener('click', () => {
+      const isOpen = amenitiesExpand.classList.toggle('is-open');
+      amenitiesToggle.setAttribute('aria-expanded', isOpen);
+      amenitiesToggle.childNodes[0].textContent = isOpen ? 'Read Less ' : 'Read More ';
+    });
+  }
+
   // ---- Form ----
   try { initContactForm(); } catch (e) {}
 
