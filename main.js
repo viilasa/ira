@@ -575,6 +575,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Gallery fade ----
   try { initGalleryFade(); } catch (e) {}
 
+
   // ---- Amenities Read More (mobile only) ----
   const amenitiesToggle = document.getElementById('amenitiesToggle');
   const amenitiesExpand = document.getElementById('amenitiesExpand');

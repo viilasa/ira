@@ -1816,6 +1816,7 @@ img.lifestyle-slide__graphic {
   height: 100vh;
   background-color: var(--ivory);
   overflow: hidden;
+  position: relative;
 }
 .editorial-fullbleed img {
   width: 100%;
@@ -1823,6 +1824,63 @@ img.lifestyle-slide__graphic {
   object-fit: cover;
   object-position: center center;
   display: block;
+}
+
+/* Overlaid text — bottom-left, editorial style */
+.editorial-fullbleed__text {
+  position: absolute;
+  bottom: 10%;
+  left: 7%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 420px;
+  background: rgba(247, 244, 239, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 24px 28px 20px;
+  border-left: 2px solid var(--gold);
+}
+
+/* Editorial text reveal animation */
+.ef-hidden {
+  opacity: 0;
+  transform: translateY(28px);
+}
+.ef-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.editorial-fullbleed__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.editorial-fullbleed__heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.1;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+
+.editorial-fullbleed__sub {
+  font-family: var(--font-body);
+  font-size: clamp(0.62rem, 0.85vw, 0.75rem);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-top: 2px;
 }
 
 /* ============================================================
@@ -2512,22 +2570,22 @@ div.sitemap-slide__img {
 /* Illustration placeholder — replace with <img> when asset is ready */
 .upcoming-section__illus {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  background-color: var(--sand);
-  border-radius: 2px;
-  /* subtle dashed outline so the placeholder is visible in dev */
-  outline: 2px dashed rgba(184, 156, 110, 0.3);
-  outline-offset: -12px;
   position: relative;
-}
-
-.upcoming-section__illus::after {
-  content: 'Illustration coming soon';
-  position: absolute;
-  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.upcoming-section__illus img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.upcoming-section__illus::after {
+  content: '';
+  display: none;
   font-family: var(--font-body);
   font-size: 0.75rem;
   letter-spacing: 0.12em;
@@ -2873,6 +2931,9 @@ div.sitemap-slide__img {
   /* ── Editorial fullbleed ── */
   .map-illus-placeholder { display: none; }
   .editorial-fullbleed { height: 50vh; }
+  .editorial-fullbleed__text { bottom: 6%; left: 4%; right: 4%; max-width: 92%; gap: 6px; padding: 16px 18px 14px; }
+  .editorial-fullbleed__heading { font-size: clamp(1.5rem, 6.5vw, 2.2rem); }
+  .editorial-fullbleed__sub { font-size: 0.58rem; letter-spacing: 0.16em; }
 
   /* ── Amenities ── */
   .amenities { padding-block: 0; }
