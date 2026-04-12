@@ -413,20 +413,67 @@ const swipers = {};
 function initSwipers() {
   if (document.querySelector('.gallery-swiper')) {
     swipers.gallery = new Swiper('.gallery-swiper', {
-      slidesPerView: 1.1,
-      spaceBetween: 16,
+      effect: 'coverflow',
       grabCursor: true,
-      loop: false,
-      breakpoints: {
-        768:  { slidesPerView: 2.1, spaceBetween: 24 },
-        1200: { slidesPerView: 3,   spaceBetween: 32 },
+      centeredSlides: true,
+      loop: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 4,
+        stretch: 60,
+        depth: 180,
+        modifier: 1.8,
+        slideShadows: true,
       },
-      pagination: { el: '.gallery-swiper .swiper-pagination', clickable: true },
       navigation: {
-        nextEl: '.gallery-swiper .swiper-button-next',
-        prevEl: '.gallery-swiper .swiper-button-prev',
+        nextEl: '.gallery-swiper__next',
+        prevEl: '.gallery-swiper__prev',
       },
     });
+  }
+
+  if (document.querySelector('.upcoming-swiper')) {
+    swipers.upcoming = new Swiper('.upcoming-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      grabCursor: true,
+      loop: false,
+      speed: 700,
+      navigation: {
+        nextEl: '.upcoming-swiper__next',
+        prevEl: '.upcoming-swiper__prev',
+      },
+      pagination: {
+        el: '.upcoming-swiper__pagination',
+        clickable: true,
+      },
+    });
+
+    // Scroll-pinned slide progression — desktop only
+    const upcomingSection = document.querySelector('.upcoming-section');
+    if (upcomingSection && typeof ScrollTrigger !== 'undefined' && window.innerWidth >= 768) {
+      let advanced = false;
+
+      ScrollTrigger.create({
+        trigger: upcomingSection,
+        start: 'top top',
+        end: '+=100%',
+        pin: true,
+        pinSpacing: true,
+        anticipatePin: 1,
+        scrub: false,
+        onUpdate(self) {
+          if (self.progress >= 0.45 && !advanced) {
+            advanced = true;
+            swipers.upcoming.slideTo(1);
+          }
+          if (self.progress < 0.3 && advanced) {
+            advanced = false;
+            swipers.upcoming.slideTo(0);
+          }
+        },
+      });
+    }
   }
 
   if (document.querySelector('.sitemap-swiper')) {
