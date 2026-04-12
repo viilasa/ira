@@ -449,31 +449,6 @@ function initSwipers() {
       },
     });
 
-    // Scroll-pinned slide progression — desktop only
-    const upcomingSection = document.querySelector('.upcoming-section');
-    if (upcomingSection && typeof ScrollTrigger !== 'undefined' && window.innerWidth >= 768) {
-      let advanced = false;
-
-      ScrollTrigger.create({
-        trigger: upcomingSection,
-        start: 'top top',
-        end: '+=100%',
-        pin: true,
-        pinSpacing: true,
-        anticipatePin: 1,
-        scrub: false,
-        onUpdate(self) {
-          if (self.progress >= 0.45 && !advanced) {
-            advanced = true;
-            swipers.upcoming.slideTo(1);
-          }
-          if (self.progress < 0.3 && advanced) {
-            advanced = false;
-            swipers.upcoming.slideTo(0);
-          }
-        },
-      });
-    }
   }
 
   if (document.querySelector('.sitemap-swiper')) {
@@ -637,8 +612,167 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Form ----
   try { initContactForm(); } catch (e) {}
 
+  // ---- Founders (about.html) ----
+  if (document.getElementById('foundersSection')) {
+    initFounders();
+  }
+
+  // ---- Blog listing (blog.html) ----
+  if (document.getElementById('blogGrid')) {
+    initBlogListing();
+  }
+
+  // ---- Blog post (blog-post.html) ----
+  if (document.getElementById('articleRoot')) {
+    initBlogPost();
+  }
+
   // Refresh ScrollTrigger after fonts/images settle
   window.addEventListener('load', () => {
     try { ScrollTrigger.refresh(); } catch (e) {}
   });
 });
+
+/* ============================================================
+   FOUNDERS — render from content.json
+============================================================ */
+function initFounders() {
+  fetch('data/content.json')
+    .then(r => r.json())
+    .then(data => {
+      const f = data.pages.about.founders;
+
+      // Intro text
+      document.getElementById('foundersEyebrow').textContent  = f.eyebrow;
+      document.getElementById('foundersLabel').textContent    = f.intro.label;
+      document.getElementById('foundersHeading').textContent  = f.intro.heading;
+      document.getElementById('foundersBody').textContent     = f.intro.body;
+
+      // Cards
+      const cards = document.getElementById('foundersCards');
+      cards.innerHTML = f.people.map(p => `
+        <div class="founder-card">
+          <div class="founder-card__image">
+            ${p.image
+              ? `<img src="${p.image}" alt="${p.name}" loading="lazy" decoding="async">`
+              : `<div class="founder-card__placeholder">
+                   <div class="founder-card__placeholder-icon">
+                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                   </div>
+                   <span class="founder-card__placeholder-label">${p.imagePlaceholder}</span>
+                 </div>`
+            }
+          </div>
+          <div class="founder-card__copy">
+            <h3 class="founder-card__name">${p.name}</h3>
+            <span class="founder-card__role">${p.role}</span>
+            <p class="founder-card__bio">${p.bio}</p>
+          </div>
+        </div>
+      `).join('');
+    })
+    .catch(e => console.warn('Founders: could not load content.json', e));
+}
+
+/* ============================================================
+   BLOG LISTING — fetch + render cards
+============================================================ */
+function initBlogListing() {
+  const grid = document.getElementById('blogGrid');
+  if (!grid) return;
+
+  fetch('data/blogs.json')
+    .then(r => r.json())
+    .then(posts => {
+      grid.innerHTML = posts.map(post => `
+        <a class="blog-card" href="blog-post.html?slug=${post.slug}">
+          <div class="blog-card__cover">
+            <img src="${post.image}" alt="${post.title}" loading="lazy" decoding="async" />
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__tag">${post.tag}</span>
+            <h2 class="blog-card__title">${post.title}</h2>
+            <p class="blog-card__excerpt">${post.excerpt}</p>
+            <div class="blog-card__meta">
+              <span>${formatDate(post.date)}</span>
+              <span class="blog-card__meta-sep">·</span>
+              <span>${post.readTime}</span>
+            </div>
+            <span class="blog-card__read">Read →</span>
+          </div>
+        </a>
+      `).join('');
+    })
+    .catch(() => {
+      grid.innerHTML = '<p style="color:var(--ash);font-family:var(--font-body);grid-column:1/-1">Unable to load articles.</p>';
+    });
+}
+
+/* ============================================================
+   BLOG POST — fetch metadata from JSON, then load .md file
+============================================================ */
+function initBlogPost() {
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('slug');
+
+  if (!slug) {
+    document.getElementById('articleTitle').textContent = 'Article not found.';
+    return;
+  }
+
+  fetch('data/blogs.json')
+    .then(r => r.json())
+    .then(posts => {
+      const post = posts.find(p => p.slug === slug);
+      if (!post) {
+        document.getElementById('articleTitle').textContent = 'Article not found.';
+        return;
+      }
+
+      // Meta tags
+      document.getElementById('postMetaTitle').textContent = post.title + ' — IRA Estates';
+      document.getElementById('postMetaDesc').setAttribute('content', post.excerpt);
+
+      // Cover image
+      const cover = document.getElementById('articleCover');
+      if (cover) cover.style.backgroundImage = `url('${post.image}')`;
+
+      // Header fields
+      document.getElementById('articleTag').textContent = post.tag;
+      document.getElementById('articleTitle').textContent = post.title;
+      document.getElementById('articleDate').textContent = formatDate(post.date);
+      document.getElementById('articleReadTime').textContent = post.readTime;
+      document.getElementById('articleAuthor').textContent = post.author;
+
+      // Fetch the .md file and parse with marked
+      return fetch(post.mdFile)
+        .then(r => {
+          if (!r.ok) throw new Error('md not found');
+          return r.text();
+        })
+        .then(md => {
+          const bodyEl = document.getElementById('articleBody');
+          if (typeof marked !== 'undefined') {
+            // Skip the H1 (first line) — already shown in article__title
+            const mdWithoutH1 = md.replace(/^#\s+.+\n/, '').trimStart();
+            bodyEl.innerHTML = marked.parse(mdWithoutH1);
+          } else {
+            // Fallback: plain text
+            bodyEl.innerHTML = '<p>' + md.replace(/\n\n/g, '</p><p>') + '</p>';
+          }
+        });
+    })
+    .catch(() => {
+      const title = document.getElementById('articleTitle');
+      if (title) title.textContent = 'Unable to load article.';
+    });
+}
+
+/* ── Utility: format date ── */
+function formatDate(dateStr) {
+  try {
+    return new Date(dateStr).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
+  } catch (e) {
+    return dateStr;
+  }
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "living-by-the-sea",
+    "mdFile": "data/blogs/living-by-the-sea.md",
+    "title": "Living by the Sea: What South Goa Offers That Nowhere Else Can",
+    "date": "2026-03-18",
+    "author": "IRA Estates",
+    "tag": "Lifestyle",
+    "excerpt": "Benaulim is not a destination. It is a disposition — a quieter way of being that the rest of Goa long forgot.",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "art-of-the-private-pool-villa",
+    "mdFile": "data/blogs/art-of-the-private-pool-villa.md",
+    "title": "The Art of the Private Pool Villa: Design Beyond the Instagram Frame",
+    "date": "2026-03-04",
+    "author": "IRA Estates",
+    "tag": "Design",
+    "excerpt": "A private pool is not a luxury add-on. In the right climate, with the right design intent, it becomes the organizing principle of an entire way of living.",
+    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1200&auto=format&fit=crop",
+    "readTime": "6 min read"
+  },
+  {
+    "slug": "why-benaulim",
+    "mdFile": "data/blogs/why-benaulim.md",
+    "title": "Why Benaulim? The Story Behind IRA Estates' Location",
+    "date": "2026-02-19",
+    "author": "IRA Estates",
+    "tag": "Location",
+    "excerpt": "We looked at fourteen sites across Goa before we stopped at Benaulim. Here is what we found — and why we stayed.",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=1200&auto=format&fit=crop",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "investing-in-goa-real-estate-2026",
+    "mdFile": "data/blogs/investing-in-goa-real-estate-2026.md",
+    "title": "Investing in Goa Real Estate in 2026: What the Numbers Say",
+    "date": "2026-02-05",
+    "author": "IRA Estates",
+    "tag": "Investment",
+    "excerpt": "Luxury villa values in South Goa have appreciated 18–24% year-on-year since 2022. But the more interesting story is in the rental yields.",
+    "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop",
+    "readTime": "7 min read"
+  },
+  {
+    "slug": "kasauli-indias-next-luxury-hill-retreat",
+    "mdFile": "data/blogs/kasauli-indias-next-luxury-hill-retreat.md",
+    "title": "Kasauli: India's Next Luxury Hill Retreat",
+    "date": "2026-01-22",
+    "author": "IRA Estates",
+    "tag": "Projects",
+    "excerpt": "At 6,000 ft, in the pine forests above Chandigarh, IRA Estates is quietly preparing its second chapter.",
+    "image": "https://images.unsplash.com/photo-1637204329780-e82358c50ee3?q=80&w=1200&auto=format&fit=crop",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "design-principles-behind-every-villa",
+    "mdFile": "data/blogs/design-principles-behind-every-villa.md",
+    "title": "Inside IRA: The Design Principles Behind Every Villa",
+    "date": "2026-01-08",
+    "author": "IRA Estates",
+    "tag": "Design",
+    "excerpt": "Restraint is not the absence of ambition. At IRA Estates, it is the most demanding form of it.",
+    "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop",
+    "readTime": "6 min read"
+  }
+]

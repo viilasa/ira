@@ -20,6 +20,13 @@
 <body>
 
   <!-- ============================================================
+       SITE HEADER — fixed wordmark (home only: fades over hero)
+  ============================================================ -->
+  <header class="site-header">
+    <a href="index.html" class="site-header__wordmark">IRA ESTATES</a>
+  </header>
+
+  <!-- ============================================================
        HAMBURGER — fixed top-left, always visible
   ============================================================ -->
   <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
@@ -36,51 +43,33 @@
 
     <ul class="mobile-nav__list">
       <li>
-        <a href="#hero" class="mobile-nav__link">
+        <a href="index.html" class="mobile-nav__link">
           <span class="mobile-nav__dot"></span>
           <span class="mobile-nav__label">Home</span>
         </a>
       </li>
       <li>
-        <a href="#overview" class="mobile-nav__link">
+        <a href="about.html" class="mobile-nav__link">
           <span class="mobile-nav__dot"></span>
-          <span class="mobile-nav__label">About IRA Estates</span>
+          <span class="mobile-nav__label">About</span>
         </a>
       </li>
       <li>
-        <a href="#residences" class="mobile-nav__link">
+        <a href="projects.html" class="mobile-nav__link">
           <span class="mobile-nav__dot"></span>
-          <span class="mobile-nav__label">The Villas</span>
+          <span class="mobile-nav__label">Projects</span>
         </a>
       </li>
       <li>
-        <a href="#gallery" class="mobile-nav__link">
+        <a href="blog.html" class="mobile-nav__link">
           <span class="mobile-nav__dot"></span>
-          <span class="mobile-nav__label">Gallery</span>
+          <span class="mobile-nav__label">Blogs</span>
         </a>
       </li>
       <li>
-        <a href="#amenities" class="mobile-nav__link">
+        <a href="contact.html" class="mobile-nav__link mobile-nav__link--enquire">
           <span class="mobile-nav__dot"></span>
-          <span class="mobile-nav__label">Amenities</span>
-        </a>
-      </li>
-      <li>
-        <a href="#location" class="mobile-nav__link">
-          <span class="mobile-nav__dot"></span>
-          <span class="mobile-nav__label">Location</span>
-        </a>
-      </li>
-      <li>
-        <a href="#contact" class="mobile-nav__link">
-          <span class="mobile-nav__dot"></span>
-          <span class="mobile-nav__label">Floor Plans &amp; Specs</span>
-        </a>
-      </li>
-      <li>
-        <a href="#contact" class="mobile-nav__link mobile-nav__link--enquire">
-          <span class="mobile-nav__dot"></span>
-          <span class="mobile-nav__label">Enquire Now</span>
+          <span class="mobile-nav__label">Contact Us</span>
         </a>
       </li>
     </ul>
@@ -428,127 +417,6 @@
 
     </section>
 
-    <!-- ============================================================
-         GALLERY — multi-image carousel
-    ============================================================ -->
-    <section id="gallery" class="gallery-section">
-
-      <!-- Eyebrow label -->
-      <div class="container">
-        <p class="gallery-carousel__eyebrow reveal">The Residences</p>
-      </div>
-
-      <!-- Cinematic coverflow carousel -->
-      <div class="swiper gallery-swiper">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide gallery-slide">
-            <img src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775738313/Cameraview_8_entry_vwa0af.jpg" alt="Villa entry" loading="lazy" decoding="async">
-            <div class="gallery-slide__info">
-              <span class="gallery-slide__type">Villa Type I</span>
-              <span class="gallery-slide__room">Entry Facade</span>
-            </div>
-          </div>
-
-          <div class="swiper-slide gallery-slide">
-            <img src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775738302/Cameraview_11_poolview_tdwton.jpg" alt="Villa pool view" loading="lazy" decoding="async">
-            <div class="gallery-slide__info">
-              <span class="gallery-slide__type">Villa Type I</span>
-              <span class="gallery-slide__room">Private Pool</span>
-            </div>
-          </div>
-
-          <div class="swiper-slide gallery-slide">
-            <img src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775738201/villa1_bedroom_ytznqw.jpg" alt="Villa bedroom" loading="lazy" decoding="async">
-            <div class="gallery-slide__info">
-              <span class="gallery-slide__type">Villa Type II</span>
-              <span class="gallery-slide__room">Bedroom I</span>
-            </div>
-          </div>
-
-          <div class="swiper-slide gallery-slide">
-            <img src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775738201/villa1_living_yutwem.jpg" alt="Villa living room" loading="lazy" decoding="async">
-            <div class="gallery-slide__info">
-              <span class="gallery-slide__type">Villa Type II</span>
-              <span class="gallery-slide__room">Living Area</span>
-            </div>
-          </div>
-
-          <div class="swiper-slide gallery-slide">
-            <img src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775738201/villa1_dinning_koqrgr.jpg" alt="Villa dining room" loading="lazy" decoding="async">
-            <div class="gallery-slide__info">
-              <span class="gallery-slide__type">Villa Type II</span>
-              <span class="gallery-slide__room">Dining Room</span>
-            </div>
-          </div>
-
-          <div class="swiper-slide gallery-slide">
-            <img src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775738308/Cameraview_1_Night_sq1kwl.jpg" alt="Villa night view" loading="lazy" decoding="async">
-            <div class="gallery-slide__info">
-              <span class="gallery-slide__type">Villa Type I</span>
-              <span class="gallery-slide__room">Night View</span>
-            </div>
-          </div>
-
-          <div class="swiper-slide gallery-slide">
-            <img src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775738315/Cameraview_9_a8qrge.jpg" alt="Villa exterior" loading="lazy" decoding="async">
-            <div class="gallery-slide__info">
-              <span class="gallery-slide__type">Villa Type I</span>
-              <span class="gallery-slide__room">Exterior View</span>
-            </div>
-          </div>
-
-        </div><!-- /.swiper-wrapper -->
-
-        <div class="gallery-swiper__prev swiper-button-prev"></div>
-        <div class="gallery-swiper__next swiper-button-next"></div>
-      </div><!-- /.gallery-swiper -->
-
-      <!-- Stats bar -->
-      <div class="gallery-stats container reveal">
-        <div class="gallery-stat">
-          <span class="gallery-stat__value">2100<span class="gallery-stat__unit"> sqm</span></span>
-          <span class="gallery-stat__label">Plot Size</span>
-        </div>
-        <div class="gallery-stat__divider"></div>
-        <div class="gallery-stat">
-          <span class="gallery-stat__value">4<span class="gallery-stat__unit"> BHK</span></span>
-          <span class="gallery-stat__label">Bedrooms</span>
-        </div>
-        <div class="gallery-stat__divider"></div>
-        <div class="gallery-stat">
-          <span class="gallery-stat__value">8<span class="gallery-stat__unit"> Units</span></span>
-          <span class="gallery-stat__label">Exclusive Villas</span>
-        </div>
-        <div class="gallery-stat__divider"></div>
-        <div class="gallery-stat">
-          <span class="gallery-stat__value">Ongoing</span>
-          <span class="gallery-stat__label">Project Status</span>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- ============================================================
-         VIDEO WALKTHROUGH — after gallery
-    ============================================================ -->
-    <div class="video-section">
-      <div class="container">
-        <p class="video-section__label reveal">
-          An exclusive walk-through of IRA Estates, Benaulim, South Goa.
-        </p>
-      </div>
-      <div class="video-section__frame-wrap reveal" data-delay="0.1">
-        <iframe
-          class="video-section__iframe"
-          src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-          title="IRA Estates walkthrough — IRA Estates"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
 
     <!-- ============================================================
          LIFESTYLE SLIDER — illustrations + quote carousel
@@ -603,19 +471,6 @@
       </div><!-- /.lifestyle-swiper -->
 
     </div><!-- /.lifestyle-section -->
-
-    <!-- ============================================================
-         ILLUSTRATION PLACEHOLDER — Kasauli illustrated map
-         Leave >110vh of space for the graphic asset
-    ============================================================ -->
-    <div class="editorial-fullbleed">
-      <img src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1775816450/minimal-editorial-illustration-of_h2fitg.svg" alt="Editorial illustration" loading="lazy" decoding="async">
-      <div class="editorial-fullbleed__text">
-        <span class="editorial-fullbleed__eyebrow reveal">Benaulim · South Goa</span>
-        <h2 class="editorial-fullbleed__heading reveal" data-delay="0.15">Where the sea<br>sets the pace.</h2>
-        <p class="editorial-fullbleed__sub reveal" data-delay="0.3">Eight villas. One shore. No compromises.</p>
-      </div>
-    </div>
 
     <!-- ============================================================
          AMENITIES — Sustainability card

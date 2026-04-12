@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blogs — IRA Estates</title>
+  <meta name="description" content="The IRA Estates Blogs — stories on design, lifestyle, location, and the art of considered living." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="inner-page">
+
+  <!-- Site header -->
+  <header class="site-header site-header--inner">
+    <a href="index.html" class="site-header__wordmark">IRA ESTATES</a>
+  </header>
+
+  <!-- Hamburger -->
+  <button class="hamburger burger-dark" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <!-- Mobile nav drawer -->
+  <div id="mobile-nav" class="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button class="mobile-nav__close" aria-label="Close menu">&times;</button>
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" class="mobile-nav__link"><span class="mobile-nav__dot"></span><span class="mobile-nav__label">Home</span></a></li>
+      <li><a href="about.html" class="mobile-nav__link"><span class="mobile-nav__dot"></span><span class="mobile-nav__label">About</span></a></li>
+      <li><a href="projects.html" class="mobile-nav__link"><span class="mobile-nav__dot"></span><span class="mobile-nav__label">Projects</span></a></li>
+      <li><a href="blog.html" class="mobile-nav__link is-active"><span class="mobile-nav__dot"></span><span class="mobile-nav__label">Blogs</span></a></li>
+      <li><a href="contact.html" class="mobile-nav__link mobile-nav__link--enquire"><span class="mobile-nav__dot"></span><span class="mobile-nav__label">Contact Us</span></a></li>
+    </ul>
+    <div class="mobile-nav__footer"><span>IRA ESTATES</span></div>
+  </div>
+  <div class="mobile-nav__overlay" aria-hidden="true"></div>
+
+  <!-- Top nav bar -->
+  <nav class="top-nav">
+    <ul class="top-nav__list">
+      <li><a href="index.html" class="top-nav__link">Home</a></li>
+      <li><a href="about.html" class="top-nav__link">About</a></li>
+      <li><a href="projects.html" class="top-nav__link">Projects</a></li>
+      <li><a href="blog.html" class="top-nav__link is-active">Blogs</a></li>
+      <li><a href="contact.html" class="top-nav__link top-nav__link--cta">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- Page hero -->
+    <section class="page-hero">
+      <div class="page-hero__inner container">
+        <span class="eyebrow reveal">Stories & Perspectives</span>
+        <h1 class="page-hero__title reveal" data-delay="0.08">The Blogs</h1>
+        <p class="page-hero__sub reveal" data-delay="0.16">Design, lifestyle, location, and the considered life — written from within IRA Estates.</p>
+      </div>
+    </section>
+
+    <!-- Blog grid — rendered by main.js from data/blogs.json -->
+    <section class="blog-section">
+      <div class="blog-grid container" id="blogGrid">
+        <!-- Cards injected here by JS -->
+        <!-- Fallback for no-JS or load errors -->
+        <noscript>
+          <p style="color:var(--slate);font-family:var(--font-body);">Please enable JavaScript to view the journal.</p>
+        </noscript>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <p class="footer-main__tagline reveal">Reach out to us for a personal conversation about IRA Estates.</p>
+      <div class="footer-monkey">
+        <img src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775636686/leaves_hwhm2k.svg" alt="" loading="lazy" decoding="async">
+      </div>
+      <address class="footer-address reveal">
+        IRA Estates, Benaulim, South Goa — 403716<br>Goa, India<br>
+        <a href="mailto:rauni_bhandari@hotmail.com">rauni_bhandari@hotmail.com</a> |
+        <a href="tel:+919821101180">+91 98211 01180</a>
+      </address>
+      <div class="footer-logo reveal"><span>IRA ESTATES</span></div>
+      <a href="contact.html" class="footer-cta reveal">ENQUIRE ABOUT IRA ESTATES</a>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-bottom__copy">IRA Estates · Luxury Villas · South Goa</span>
+      <p class="footer-bottom__disclaimer">Disclaimer: All renders, images, and specifications are indicative and subject to change at the sole discretion of IRA Estates. This communication does not constitute an offer or agreement of sale. Interested parties are advised to conduct their own due diligence.</p>
+      <div class="footer-bottom__social">
+        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="#" aria-label="Pinterest"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.17 1.22-5.17s-.31-.63-.31-1.56c0-1.46.85-2.56 1.9-2.56.9 0 1.33.67 1.33 1.48 0 .9-.58 2.26-.87 3.51-.25 1.05.52 1.9 1.54 1.9 1.85 0 3.08-2.38 3.08-5.2 0-2.14-1.44-3.75-4.04-3.75-2.94 0-4.77 2.2-4.77 4.64 0 .84.24 1.43.62 1.89.17.2.19.28.13.51-.04.17-.15.58-.19.74-.06.24-.24.32-.44.23-1.25-.51-1.83-1.89-1.83-3.44 0-2.55 2.16-5.62 6.44-5.62 3.45 0 5.73 2.5 5.73 5.19 0 3.55-1.96 6.2-4.84 6.2-1.03 0-1.99-.55-2.32-1.18l-.63 2.38c-.23.88-.84 1.98-1.25 2.65.94.29 1.94.45 2.97.45 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

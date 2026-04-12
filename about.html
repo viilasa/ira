@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — IRA Estates</title>
+  <meta name="description" content="IRA Estates is a luxury residential developer building considered homes in India's finest locations. Learn about our story, values, and design philosophy." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="inner-page">
+
+  <!-- Site header -->
+  <header class="site-header site-header--inner">
+    <a href="index.html" class="site-header__wordmark">IRA ESTATES</a>
+  </header>
+
+  <!-- Hamburger -->
+  <button class="hamburger burger-dark" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <!-- Mobile nav drawer -->
+  <div id="mobile-nav" class="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button class="mobile-nav__close" aria-label="Close menu">&times;</button>
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" class="mobile-nav__link"><span class="mobile-nav__dot"></span><span class="mobile-nav__label">Home</span></a></li>
+      <li><a href="about.html" class="mobile-nav__link is-active"><span class="mobile-nav__dot"></span><span class="mobile-nav__label">About</span></a></li>
+      <li><a href="projects.html" class="mobile-nav__link"><span class="mobile-nav__dot"></span><span class="mobile-nav__label">Projects</span></a></li>
+      <li><a href="blog.html" class="mobile-nav__link"><span class="mobile-nav__dot"></span><span class="mobile-nav__label">Blogs</span></a></li>
+      <li><a href="contact.html" class="mobile-nav__link mobile-nav__link--enquire"><span class="mobile-nav__dot"></span><span class="mobile-nav__label">Contact Us</span></a></li>
+    </ul>
+    <div class="mobile-nav__footer"><span>IRA ESTATES</span></div>
+  </div>
+  <div class="mobile-nav__overlay" aria-hidden="true"></div>
+
+  <!-- Top nav bar -->
+  <nav class="top-nav">
+    <ul class="top-nav__list">
+      <li><a href="index.html" class="top-nav__link">Home</a></li>
+      <li><a href="about.html" class="top-nav__link is-active">About</a></li>
+      <li><a href="projects.html" class="top-nav__link">Projects</a></li>
+      <li><a href="blog.html" class="top-nav__link">Blogs</a></li>
+      <li><a href="contact.html" class="top-nav__link top-nav__link--cta">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- Page hero -->
+    <section class="page-hero">
+      <div class="page-hero__inner container">
+        <span class="eyebrow reveal">Who We Are</span>
+        <h1 class="page-hero__title reveal" data-delay="0.08">About IRA Estates</h1>
+        <p class="page-hero__sub reveal" data-delay="0.16">A company built on restraint, craft, and a deep respect for place.</p>
+      </div>
+    </section>
+
+    <!-- Story section -->
+    <section class="about-story">
+      <div class="about-story__inner container">
+        <div class="about-story__image reveal">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop" alt="IRA Estates villa" loading="lazy" decoding="async" />
+        </div>
+        <div class="about-story__copy">
+          <span class="eyebrow reveal">Our Story</span>
+          <h2 class="about-story__heading reveal" data-delay="0.08">Built from a belief<br>that less is more.</h2>
+          <p class="about-story__para reveal" data-delay="0.12">IRA Estates was founded by people who had spent years watching the luxury residential market default to excess — more square footage, more ornamentation, more spectacle. The question they kept asking was: what would it look like to build the opposite?</p>
+          <p class="about-story__para reveal" data-delay="0.16">The answer became IRA Estates. A company committed to developing a small number of exceptional residences in India's finest locations — not many, and not fast, but each one considered in every detail from the ground up.</p>
+          <p class="about-story__para reveal" data-delay="0.2">Our first project is in Benaulim, South Goa: eight private pool villas on a sheltered coastal site, two minutes from the beach. Our second is coming to the pine ridges of Kasauli, Himachal Pradesh. Both are shaped by the same conviction — that the finest home is the one that knows exactly where it is.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founders section — rendered from data/content.json -->
+    <section class="about-founders" id="foundersSection">
+      <div class="about-founders__inner container">
+
+        <!-- Left col: intro -->
+        <div class="about-founders__intro">
+          <span class="eyebrow reveal" id="foundersEyebrow"></span>
+          <div class="about-founders__label reveal" data-delay="0.04" id="foundersLabel"></div>
+          <h2 class="about-founders__heading reveal" data-delay="0.08" id="foundersHeading"></h2>
+          <p class="about-founders__body reveal" data-delay="0.14" id="foundersBody"></p>
+        </div>
+
+        <!-- Right col: founder cards -->
+        <div class="about-founders__cards" id="foundersCards">
+          <!-- Injected by JS -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Philosophy section -->
+    <section class="about-philosophy">
+      <div class="about-philosophy__inner container">
+
+        <div class="about-philosophy__intro">
+          <span class="eyebrow reveal">Our Philosophy</span>
+          <h2 class="about-philosophy__heading reveal" data-delay="0.08">Design is not<br>decoration. It is decision.</h2>
+        </div>
+
+        <div class="about-philosophy__principles">
+
+          <div class="about-philosophy__item reveal" data-delay="0.0">
+            <div class="about-philosophy__item-head">
+              <span class="about-philosophy__num">01</span>
+              <h3 class="about-philosophy__name">The house should know where it is.</h3>
+            </div>
+            <p class="about-philosophy__desc">Every material, every proportion, every spatial decision at IRA Estates references the land it sits on — not as a theme, but as a fact. The laterite stone comes from local quarries. The rooflines respond to monsoon drainage. The deep verandahs exist because the Goan afternoon demands shade, not because shade is fashionable.</p>
+          </div>
+
+          <div class="about-philosophy__item reveal" data-delay="0.1">
+            <div class="about-philosophy__item-head">
+              <span class="about-philosophy__num">02</span>
+              <h3 class="about-philosophy__name">Less surface, more space.</h3>
+            </div>
+            <p class="about-philosophy__desc">We resist ornamentation that does not earn its place. In the context of a private pool villa in South Goa, decoration competes with the landscape rather than framing it. The house should be quiet enough that you notice the sky.</p>
+          </div>
+
+          <div class="about-philosophy__item reveal" data-delay="0.2">
+            <div class="about-philosophy__item-head">
+              <span class="about-philosophy__num">03</span>
+              <h3 class="about-philosophy__name">The transition is as important as the destination.</h3>
+            </div>
+            <p class="about-philosophy__desc">The sequence from gate to door to living room to pool deck is not logistical — it is experiential. The compression and release of space, the moment of first seeing the pool, the way the living room opens entirely to the outside. These are not accidents. They are the design.</p>
+          </div>
+
+          <div class="about-philosophy__item reveal" data-delay="0.3">
+            <div class="about-philosophy__item-head">
+              <span class="about-philosophy__num">04</span>
+              <h3 class="about-philosophy__name">Durability over novelty.</h3>
+            </div>
+            <p class="about-philosophy__desc">We build for thirty years, not three. Stone, concrete, and hardwood over finishes that look perfect on day one and tired by year five. A beautiful house should become more itself over time, not less.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Values section -->
+    <section class="about-values">
+      <div class="container">
+        <span class="eyebrow reveal" style="text-align:center;display:block;">What We Stand For</span>
+        <h2 class="about-values__heading reveal" data-delay="0.08">Three principles.<br>Every project.</h2>
+        <div class="about-values__grid">
+          <div class="about-values__card reveal" data-delay="0.0">
+            <span class="about-values__num">01</span>
+            <h3 class="about-values__name">Place First</h3>
+            <p class="about-values__desc">Every IRA residence is designed from its site outward. The landscape, the light, the material vernacular of the region — these are not backdrop. They are the brief.</p>
+          </div>
+          <div class="about-values__card reveal" data-delay="0.1">
+            <span class="about-values__num">02</span>
+            <h3 class="about-values__name">Craft Over Scale</h3>
+            <p class="about-values__desc">We build fewer homes than we could. This is intentional. Smaller volumes allow for the level of attention that distinguishes a great house from an adequate one.</p>
+          </div>
+          <div class="about-values__card reveal" data-delay="0.2">
+            <span class="about-values__num">03</span>
+            <h3 class="about-values__name">Built to Last</h3>
+            <p class="about-values__desc">We choose materials and systems that age well — stone, concrete, hardwood — over surfaces that look perfect on day one and tired by year five. We build for decades, not for the launch brochure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy pullquote -->
+    <section class="about-quote">
+      <div class="container">
+        <blockquote class="about-quote__text reveal">
+          "The finest home is not the largest or the most ornamented.<br>It is the one that knows where it is."
+        </blockquote>
+        <cite class="about-quote__attr reveal" data-delay="0.1">— IRA Estates</cite>
+      </div>
+    </section>
+
+    <!-- CTA strip -->
+    <section class="about-cta-strip">
+      <div class="container">
+        <h2 class="about-cta-strip__heading reveal">See what we're building.</h2>
+        <div class="about-cta-strip__actions reveal" data-delay="0.1">
+          <a href="projects.html" class="btn btn--primary">Our Projects</a>
+          <a href="contact.html" class="btn btn--outline-dark">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <p class="footer-main__tagline reveal">Reach out to us for a personal conversation about IRA Estates.</p>
+      <div class="footer-monkey">
+        <img src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775636686/leaves_hwhm2k.svg" alt="" loading="lazy" decoding="async">
+      </div>
+      <address class="footer-address reveal">
+        IRA Estates, Benaulim, South Goa — 403716<br>Goa, India<br>
+        <a href="mailto:rauni_bhandari@hotmail.com">rauni_bhandari@hotmail.com</a> |
+        <a href="tel:+919821101180">+91 98211 01180</a>
+      </address>
+      <div class="footer-logo reveal"><span>IRA ESTATES</span></div>
+      <a href="contact.html" class="footer-cta reveal">ENQUIRE ABOUT IRA ESTATES</a>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-bottom__copy">IRA Estates · Luxury Villas · South Goa</span>
+      <p class="footer-bottom__disclaimer">Disclaimer: All renders, images, and specifications are indicative and subject to change at the sole discretion of IRA Estates. This communication does not constitute an offer or agreement of sale. Interested parties are advised to conduct their own due diligence.</p>
+      <div class="footer-bottom__social">
+        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="#" aria-label="Pinterest"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.17 1.22-5.17s-.31-.63-.31-1.56c0-1.46.85-2.56 1.9-2.56.9 0 1.33.67 1.33 1.48 0 .9-.58 2.26-.87 3.51-.25 1.05.52 1.9 1.54 1.9 1.85 0 3.08-2.38 3.08-5.2 0-2.14-1.44-3.75-4.04-3.75-2.94 0-4.77 2.2-4.77 4.64 0 .84.24 1.43.62 1.89.17.2.19.28.13.51-.04.17-.15.58-.19.74-.06.24-.24.32-.44.23-1.25-.51-1.83-1.89-1.83-3.44 0-2.55 2.16-5.62 6.44-5.62 3.45 0 5.73 2.5 5.73 5.19 0 3.55-1.96 6.2-4.84 6.2-1.03 0-1.99-.55-2.32-1.18l-.63 2.38c-.23.88-.84 1.98-1.25 2.65.94.29 1.94.45 2.97.45 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
