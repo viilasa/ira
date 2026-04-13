@@ -853,6 +853,8 @@ function formatDate(dateStr) {
 
   function initPlayer() {
     ytPlayer = new YT.Player(frameWrap, {
+      width: '100%',
+      height: '100%',
       videoId: vid,
       playerVars: {
         controls: 1,       // required for unlisted/non-partner videos
