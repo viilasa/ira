@@ -3982,6 +3982,77 @@ body.about-page {
   transform: translateY(36px);
 }
 
+/* ── Blog hero — editorial split ── */
+.blog-hero {
+  padding: 100px 0 0;
+  background: var(--ivory);
+}
+
+.blog-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-end;
+  gap: 48px 80px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+.blog-hero__left .eyebrow {
+  display: block;
+  margin-bottom: 28px;
+}
+
+.blog-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 7.5vw, 8rem);
+  font-weight: 300;
+  font-style: normal;
+  line-height: 0.92;
+  color: var(--ink);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.blog-hero__title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.blog-hero__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding-bottom: 8px;
+}
+
+.blog-hero__rule {
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.55;
+  flex-shrink: 0;
+}
+
+.blog-hero__desc {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.78;
+  color: var(--slate);
+  max-width: 380px;
+  margin: 0;
+}
+
+.blog-hero__count {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
 /* ── About page ── */
 .about-story {
   padding: var(--section-pad-y) 0;
@@ -5646,6 +5717,17 @@ body.about-page {
   /* ═══════════════════════════════════════
      BLOG PAGE
   ═══════════════════════════════════════ */
+
+  /* Blog hero — stack on mobile */
+  .blog-hero { padding-top: 72px; }
+  .blog-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-bottom: 36px;
+  }
+  .blog-hero__title { font-size: clamp(3rem, 12vw, 5rem); line-height: 0.95; }
+  .blog-hero__desc { font-size: 0.92rem; }
+  .blog-hero__right { gap: 14px; }
 
   .blog-section { padding-block: 40px 56px; }
   .blog-grid { grid-template-columns: 1fr; gap: 3px; }
