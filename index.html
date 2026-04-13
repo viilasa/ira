@@ -7,6 +7,7 @@
   <meta name="description" content="IRA Estates — 8 exclusive 4BHK villas with private pools in Benaulim, South Goa by IRA Estates." />
 
   <!-- Google Fonts -->
+  <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1776102628/ira_nhitnp.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
@@ -22,9 +23,7 @@
   <!-- ============================================================
        SITE HEADER — fixed wordmark (home only: fades over hero)
   ============================================================ -->
-  <header class="site-header">
-    <a href="index.html" class="site-header__wordmark">IRA ESTATES</a>
-  </header>
+  <header class="site-header"></header>
 
   <!-- ============================================================
        HAMBURGER — fixed top-left, always visible
@@ -82,34 +81,19 @@
   </div>
   <div class="mobile-nav__overlay" aria-hidden="true"></div>
 
-  <!-- ============================================================
-       VERTICAL DOT NAVIGATION (fixed left)
-  ============================================================ -->
-  <nav class="dot-nav" aria-label="Section navigation">
-    <ul class="dot-nav__list">
-      <li>
-        <a href="#hero"       class="dot-nav__dot is-active" aria-label="Hero"       data-label="Hero"></a>
-      </li>
-      <li>
-        <a href="#overview"   class="dot-nav__dot" aria-label="Overview"   data-label="Overview"></a>
-      </li>
-      <li>
-        <a href="#residences" class="dot-nav__dot" aria-label="Residences" data-label="Residences"></a>
-      </li>
-      <li>
-        <a href="#gallery"    class="dot-nav__dot" aria-label="Gallery"    data-label="Gallery"></a>
-      </li>
-      <li>
-        <a href="#amenities"  class="dot-nav__dot" aria-label="Amenities"  data-label="Amenities"></a>
-      </li>
-      <li>
-        <a href="#location"   class="dot-nav__dot" aria-label="Location"   data-label="Location"></a>
-      </li>
-      <li>
-        <a href="#contact"    class="dot-nav__dot" aria-label="Contact"    data-label="Enquire"></a>
-      </li>
-    </ul>
-  </nav>
+
+  <!-- Section sidebar indicator -->
+  <aside class="section-indicator" aria-hidden="true">
+    <div class="section-indicator__lines">
+      <span class="section-indicator__line" data-index="0"></span>
+      <span class="section-indicator__line" data-index="1"></span>
+      <span class="section-indicator__line" data-index="2"></span>
+      <span class="section-indicator__line" data-index="3"></span>
+      <span class="section-indicator__line" data-index="4"></span>
+      <span class="section-indicator__line" data-index="5"></span>
+    </div>
+    <span class="section-indicator__label">IRA Estates</span>
+  </aside>
 
   <main>
 
@@ -134,27 +118,22 @@
         <div class="hero__overlay" aria-hidden="true"></div>
       </div>
 
-      <!-- Center content block -->
-      <div class="hero__content">
-
-        <!-- Main project title — outlined stroke text, two lines -->
+      <!-- Top-right: logo + brand name -->
+      <div class="hero__brand-block">
+        <img
+          class="hero__logo"
+          src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1776102628/ira_nhitnp.svg"
+          alt="IRA Estates"
+        />
         <h1 class="hero__title" aria-label="IRA Estates">
-          <span class="hero__title-line">
-            <span class="hero__word">IRA</span>
-          </span>
-          <span class="hero__title-line">
-            <span class="hero__word">Estates</span>
-          </span>
+          <span class="hero__title-line"><span class="hero__word">IRA</span></span>
+          <span class="hero__title-line"><span class="hero__word">Estates</span></span>
         </h1>
+      </div>
 
-        <!-- Thin rule separator -->
-        <div class="hero__rule" aria-hidden="true"></div>
-
-        <!-- IRA Estates wordmark -->
-        <div class="hero__brand">
-          <span class="hero__brand-name">IRA Estates</span>
-        </div>
-
+      <!-- Center: main caption -->
+      <div class="hero__content">
+        <p class="hero__caption">Escape to the sea —<br>Homes in<br>South Goa.</p>
       </div><!-- /.hero__content -->
 
     </section>
@@ -164,61 +143,46 @@
     ============================================================ -->
     <section id="overview" class="overview">
 
-      <!-- ── Part 1: Philosophy intro ── -->
+      <!-- ── Philosophy intro ── -->
       <div class="overview__intro">
-        <div class="container">
+        <div class="overview__intro-inner container">
 
-          <!-- "Welcome to Vianaar" — large script-italic heading, centered -->
-          <h2 class="overview__heading reveal">Welcome to IRA Estates</h2>
+          <!-- Left col -->
+          <div class="overview__left">
+            <h2 class="overview__heading reveal">Welcome to<br>IRA Estates</h2>
+            <p class="overview__sublead reveal" data-delay="0.08">
+              Nestled along the pristine shores of Benaulim, South Goa,
+              IRA Estates offers an exclusive collection of eight
+              4BHK villas — each a private world unto itself.
+            </p>
+            <img
+              class="overview__illus reveal"
+              src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775813426/a-minimal-flat-style-editorial-illustration-of-coc_jusydm.svg"
+              alt="Coconut illustration"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
 
-          <!-- Two-column body grid -->
-          <div class="overview__grid">
+          <!-- Right col -->
+          <div class="overview__right">
+            <p class="overview__para reveal">
+              IRA Estates was founded on a singular belief: that a home
+              should be an experience, not merely an address. Every villa is
+              designed to embody the spirit of Goa — open, luminous, and
+              deeply connected to the sea and sky.
+            </p>
+            <p class="overview__para reveal" data-delay="0.1">
+              Just eight villas — an intentional decision to preserve the
+              intimacy, exclusivity, and tranquility that every discerning
+              resident deserves. Here, you are not a number. You are a neighbour.
+            </p>
+            <p class="overview__signoff reveal" data-delay="0.2">
+              Welcome to a life perfectly balanced between luxury and nature.
+            </p>
+          </div>
 
-            <!-- Left col: sub-lead + plant illustration -->
-            <div class="overview__left">
-              <p class="overview__sublead reveal">
-                Nestled along the pristine shores of Benaulim, South Goa,
-                IRA Estates offers an exclusive collection of eight
-                4BHK villas — each a private world unto itself.
-              </p>
-              <div class="overview__plant reveal">
-                <img
-                  src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775809826/-illustration-of-a-curved-vintage-_hpzoiz.svg"
-                  alt="Vintage curved illustration"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </div>
-            </div>
-
-            <!-- Right col: three body paragraphs + sign-off -->
-            <div class="overview__right">
-              <p class="overview__para reveal">
-                IRA Estates was founded on a singular belief: that a home
-                should be an experience, not merely an address. Every villa at
-                IRA Estates is designed to embody the spirit of Goa —
-                open, luminous, and deeply connected to the sea and sky.
-              </p>
-              <p class="overview__para reveal" data-delay="0.1">
-                With over a decade of crafting premium residences across Goa,
-                IRA Estates has cultivated a reputation for uncompromising
-                quality, thoughtful design, and an abiding respect for the
-                natural landscape. Each project is a testament to our passion
-                for creating spaces that endure.
-              </p>
-              <p class="overview__para reveal" data-delay="0.2">
-                IRA Estates comprises just eight villas — an intentional
-                decision to preserve the intimacy, exclusivity, and tranquility
-                that every discerning resident deserves. Here, you are not a
-                number. You are a neighbour.
-              </p>
-              <p class="overview__signoff reveal" data-delay="0.3">
-                Welcome to a life perfectly balanced between luxury and nature.
-              </p>
-            </div>
-
-          </div><!-- /.overview__grid -->
-        </div><!-- /.container -->
+        </div>
       </div><!-- /.overview__intro -->
 
       <!-- ── Part 2: Arrival / birds scene ── -->

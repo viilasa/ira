@@ -612,6 +612,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Form ----
   try { initContactForm(); } catch (e) {}
 
+  // ---- Section indicator (index.html only) ----
+  if (document.querySelector('.section-indicator')) {
+    initSectionIndicator();
+  }
+
   // ---- Founders (about.html) ----
   if (document.getElementById('foundersSection')) {
     initFounders();
@@ -636,6 +641,55 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ============================================================
    FOUNDERS — render from content.json
 ============================================================ */
+/* ============================================================
+   SECTION INDICATOR
+============================================================ */
+function initSectionIndicator() {
+  const indicator  = document.querySelector('.section-indicator');
+  const labelEl    = indicator.querySelector('.section-indicator__label');
+  const lines      = Array.from(indicator.querySelectorAll('.section-indicator__line'));
+
+  const sections = [
+    { id: 'hero',       label: 'IRA Estates' },
+    { id: 'overview',   label: 'About Us' },
+    { id: 'residences', label: 'Residences' },
+    { id: 'amenities',  label: 'Amenities' },
+    { id: 'location',   label: 'Location' },
+    { id: 'contact',    label: 'Enquire' },
+  ];
+
+  // Light-background section IDs — indicator goes dark
+  const lightSections = new Set(['overview', 'residences', 'amenities', 'location', 'contact']);
+
+  let current = 0;
+
+  function activate(idx) {
+    if (idx === current && lines[idx]?.classList.contains('is-active')) return;
+    current = idx;
+    lines.forEach((l, i) => l.classList.toggle('is-active', i === idx));
+    labelEl.textContent = sections[idx]?.label ?? '';
+    const isLight = lightSections.has(sections[idx]?.id);
+    indicator.classList.toggle('is-dark', isLight);
+  }
+
+  // IntersectionObserver — fires when section reaches mid-viewport
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const idx = sections.findIndex(s => s.id === entry.target.id);
+        if (idx !== -1) activate(idx);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(s => {
+    const el = document.getElementById(s.id);
+    if (el) obs.observe(el);
+  });
+
+  activate(0);
+}
+
 function initFounders() {
   fetch('data/content.json')
     .then(r => r.json())
@@ -689,16 +743,10 @@ function initBlogListing() {
           <div class="blog-card__cover">
             <img src="${post.image}" alt="${post.title}" loading="lazy" decoding="async" />
           </div>
-          <div class="blog-card__body">
+          <div class="blog-card__overlay">
             <span class="blog-card__tag">${post.tag}</span>
             <h2 class="blog-card__title">${post.title}</h2>
-            <p class="blog-card__excerpt">${post.excerpt}</p>
-            <div class="blog-card__meta">
-              <span>${formatDate(post.date)}</span>
-              <span class="blog-card__meta-sep">·</span>
-              <span>${post.readTime}</span>
-            </div>
-            <span class="blog-card__read">Read →</span>
+            <span class="blog-card__date">${formatDate(post.date)}</span>
           </div>
         </a>
       `).join('');
