@@ -10,7 +10,7 @@
   <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1776102628/ira_nhitnp.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=EB+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -131,10 +131,17 @@
         </h1>
       </div>
 
-      <!-- Center: main caption -->
+      <!-- Bottom-left editorial content -->
       <div class="hero__content">
-        <p class="hero__caption">Escape to the sea —<br>Homes in<br>South Goa.</p>
-      </div><!-- /.hero__content -->
+        <p class="hero__caption">Escape to the sea —<br>Homes in South Goa.</p>
+        <p class="hero__descriptor">Eight exclusive 4BHK private pool villas</p>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-text">Scroll</span>
+      </div>
 
     </section>
 
@@ -222,93 +229,6 @@
 
       </div><!-- /.arrival -->
 
-      <!-- ── Kasauli beauty block ── -->
-      <div class="kasauli-intro">
-        <div class="kasauli-intro__inner container">
-
-          <!-- Left: photograph placeholder -->
-          <div class="kasauli-intro__photo reveal">
-            <img
-              src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775738581/photo-1625505826533-5c80aca7d157_jsngfu.avif"
-              alt="Benaulim Beach, South Goa"
-              loading="lazy"
-              decoding="async"
-              style="width:100%;height:100%;object-fit:cover;display:block;border-radius:2px;"
-            >
-          </div>
-
-          <!-- Right: headings + body -->
-          <div class="kasauli-intro__copy">
-            <h2 class="kasauli-intro__heading-sm reveal">
-              Untouched shores.<br>Endless serenity.
-            </h2>
-            <h2 class="kasauli-intro__heading-lg reveal" data-delay="0.1">
-              A day in Benaulim<br>demands a lifetime more.
-            </h2>
-            <p class="kasauli-intro__para reveal" data-delay="0.2">
-              Benaulim is one of South Goa's best-kept secrets — a pristine stretch
-              of golden sand where the Arabian Sea meets a quieter, more considered
-              way of living. Far from the crowds, yet close to everything.
-            </p>
-            <p class="kasauli-intro__para reveal" data-delay="0.3">
-              Coconut groves sway in the sea breeze, fishing boats dot the horizon
-              at sunrise, and evenings carry the sound of waves through open windows.
-              This is Goa as it was meant to be experienced.
-            </p>
-          </div>
-
-        </div>
-      </div><!-- /.kasauli-intro -->
-
-      <!-- ── Kasauli block 2: image LEFT, text RIGHT ── -->
-      <div class="kasauli-block-2">
-        <div class="kasauli-block-2__inner container">
-
-          <!-- Left: photo placeholder -->
-          <div class="kasauli-block-2__photo reveal">
-            <img
-              src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1775738756/Goa_nbxdnw.jpg"
-              alt="IRA Estates aerial villa view, Goa"
-              loading="lazy"
-              decoding="async"
-              style="width:100%;height:100%;object-fit:cover;display:block;border-radius:2px;"
-            >
-          </div>
-
-          <!-- Right: illustration + copy -->
-          <div class="kasauli-block-2__copy">
-
-            <!-- Small CSS decorative illustration -->
-            <div class="kasauli-deco reveal">
-              <img
-                src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775809681/-coconut--half-c_vkgcrs.svg"
-                alt="Coconut illustration"
-                loading="lazy"
-                decoding="async"
-              >
-            </div>
-
-            <p class="kasauli-block-2__para reveal" data-delay="0.05">
-              Just minutes from Benaulim Beach, IRA Estates places you at
-              the intersection of Goa's finest pleasures — sun-warmed sands,
-              world-class dining, water sports, and a thriving arts and culture
-              scene, all within effortless reach.
-            </p>
-            <p class="kasauli-block-2__para reveal" data-delay="0.15">
-              Dudhsagar Falls is 60 km away. Margao railway station lies
-              10 km to the north. Goa International Airport connects you
-              to the world in just 40 minutes. Every convenience, perfectly
-              positioned around your private paradise.
-            </p>
-            <p class="kasauli-block-2__cta reveal" data-delay="0.25">
-              South Goa's tranquility stays with you long after the tide has
-              turned. IRA Estates simply makes it your permanent address.
-            </p>
-
-          </div><!-- /.kasauli-block-2__copy -->
-        </div><!-- /.kasauli-block-2__inner -->
-      </div><!-- /.kasauli-block-2 -->
-
     </section>
 
     <!-- ============================================================
@@ -378,7 +298,8 @@
 
     <!-- ============================================================
          LIFESTYLE SLIDER — illustrations + quote carousel
-    ============================================================ -->
+         [COMMENTED OUT — reuse later]
+    ============================================================
     <div class="lifestyle-section">
 
       <div class="swiper lifestyle-swiper">
@@ -420,15 +341,14 @@
             </div>
           </div>
 
-        </div><!-- /.swiper-wrapper -->
-
+        </div>
         <div class="lifestyle-swiper__prev swiper-button-prev" aria-label="Previous slide"></div>
         <div class="lifestyle-swiper__next swiper-button-next" aria-label="Next slide"></div>
         <div class="lifestyle-swiper__pagination swiper-pagination"></div>
+      </div>
 
-      </div><!-- /.lifestyle-swiper -->
-
-    </div><!-- /.lifestyle-section -->
+    </div>
+    ============================================================ -->
 
     <!-- ============================================================
          AMENITIES — Sustainability card
@@ -610,103 +530,6 @@
       </div><!-- /.companions -->
     </section>
 
-    <!-- ============================================================
-         SITE MAP SLIDER — 14.png
-    ============================================================ -->
-    <div class="sitemap-section">
-
-      <div class="swiper sitemap-swiper">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide">
-            <div class="sitemap-slide">
-              <img class="sitemap-slide__img" src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775774002/sm_k1qmxi.png" alt="Site map overview" loading="lazy" decoding="async">
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="sitemap-slide">
-              <img class="sitemap-slide__img" src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775774081/Untitled_design_5_gahdcy.svg" alt="Site plan layout" loading="lazy" decoding="async">
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="sitemap-slide">
-              <img class="sitemap-slide__img" src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775817622/Residential_villa_complex_site_plan_sketch_afei1w.png" alt="Residential villa complex site plan" loading="lazy" decoding="async">
-            </div>
-          </div>
-
-        </div><!-- /.swiper-wrapper -->
-      </div><!-- /.sitemap-swiper -->
-
-      <!-- Bar below: label left, dots center-right, arrows right -->
-      <div class="sitemap-bar container">
-        <span class="sitemap-bar__label">
-          Floor Plan<br>
-          <span style="font-size:0.85em;color:var(--gold);opacity:0.75;">IRA Estates, Benaulim</span>
-        </span>
-        <div class="sitemap-bar__controls">
-          <div class="sitemap-swiper__pagination swiper-pagination"></div>
-          <button class="sitemap-swiper__prev swiper-button-prev" aria-label="Previous map"></button>
-          <button class="sitemap-swiper__next swiper-button-next" aria-label="Next map"></button>
-        </div>
-      </div>
-
-    </div><!-- /.sitemap-section -->
-
-    <!-- ============================================================
-         SPECIFICATIONS & INTERIORS — 15.png
-    ============================================================ -->
-    <section id="contact" class="specs-section">
-      <div class="specs-inner container">
-
-        <!-- Specifications column -->
-        <div class="specs-col">
-          <h3 class="specs-col__heading reveal">Specifications</h3>
-          <ul class="specs-col__list reveal" data-delay="0.05">
-            <li>Jindal Steel structural framework</li>
-            <li>RCC framed earthquake-resistant structure</li>
-            <li>High plinth-levels with damp-proofing below ground floor</li>
-            <li>Waterproofing for terraces and pool decks</li>
-            <li>UPVC Fenesta double-glazed windows and doors</li>
-            <li>Legrand modular electrical switches and fittings</li>
-            <li>Kohler / Jaguar sanitaryware and CP fittings</li>
-            <li>Health faucets and frameless mirrors in all bathrooms</li>
-            <li>Ceramic wall tiles for kitchen with stainless steel sink</li>
-            <li>Built-in cabling for satellite TV and high-speed internet</li>
-            <li>Private swimming pool with deck — each villa</li>
-            <li>Individually landscaped gardens</li>
-          </ul>
-        </div>
-
-        <!-- Interiors column -->
-        <div class="specs-col">
-          <h3 class="specs-col__heading reveal">Interiors</h3>
-          <ul class="specs-col__list reveal" data-delay="0.05">
-            <li>Modular kitchen with hob &amp; chimney</li>
-            <li>Italian marble / premium stone flooring</li>
-            <li>Gypsum ceilings with decorative light fixtures</li>
-            <li>Ambient and mood lighting throughout</li>
-            <li>Glass partitions in bathrooms</li>
-            <li>Decorative wall finishes and feature walls</li>
-            <li>Handcrafted terrazzo accents</li>
-            <li>Tropical landscape design by specialists</li>
-            <li>Outdoor terrace furniture provision</li>
-          </ul>
-
-          <!-- Botanical illustration placeholder — sits right of list -->
-          <div class="specs-illus reveal" data-delay="0.15" aria-label="Botanical illustration placeholder"></div>
-        </div>
-
-      </div><!-- /.specs-inner -->
-
-      <!-- Disclaimer -->
-      <p class="specs-disclaimer container reveal">
-        <em>Disclaimer:</em> Specifications are indicative and subject to change at the sole discretion of IRA Estates. Images and renders are for representational purposes only. This document does not constitute an offer or agreement of sale.
-      </p>
-
-    </section>
-
   </main>
 
   <!-- ============================================================
@@ -749,38 +572,6 @@
                   loading="lazy"
                   decoding="async"
                 >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 2 — Kasauli Hills project -->
-        <div class="swiper-slide upcoming-slide">
-          <div class="upcoming-slide__glass upcoming-slide__glass--kasauli">
-            <div class="upcoming-slide__body">
-              <div class="upcoming-slide__illus upcoming-slide__illus--kasauli">
-                <img
-                  src="https://images.unsplash.com/photo-1637204329780-e82358c50ee3?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Kasauli Hills"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </div>
-              <div class="upcoming-slide__copy">
-                <span class="upcoming-slide__tag">Kasauli, Himachal Pradesh</span>
-                <h3 class="upcoming-slide__heading">Into the hills.<br>Above the ordinary.</h3>
-                <p class="upcoming-slide__sub">
-                  Perched at 6,000 ft in the pine-covered ridges of Kasauli,
-                  IRA's next residence is designed to disappear into the landscape —
-                  and leave nothing behind but stillness.
-                </p>
-                <ul class="upcoming-slide__specs">
-                  <li><span class="upcoming-slide__spec-label">Location</span><span class="upcoming-slide__spec-val">Kasauli Hills, HP</span></li>
-                  <li><span class="upcoming-slide__spec-label">Type</span><span class="upcoming-slide__spec-val">Private Hill Residences</span></li>
-                  <li><span class="upcoming-slide__spec-label">Altitude</span><span class="upcoming-slide__spec-val">~6,000 ft</span></li>
-                  <li><span class="upcoming-slide__spec-label">Status</span><span class="upcoming-slide__spec-val">Coming Soon</span></li>
-                </ul>
-                <a href="#contact" class="upcoming-slide__cta">Register Interest →</a>
               </div>
             </div>
           </div>
