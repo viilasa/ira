@@ -1964,6 +1964,137 @@ button {
   box-shadow: 0 12px 48px rgba(26, 26, 26, 0.12);
 }
 
+/* ── Custom minimal video player ── */
+.custom-player {
+  position: relative;
+  width: 75%;
+  max-width: 960px;
+  margin-inline: auto;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 16px 56px rgba(26, 26, 26, 0.18);
+  cursor: pointer;
+}
+
+/* Poster layer */
+.custom-player__poster {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+.custom-player__poster img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.custom-player__poster-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 18, 13, 0.28);
+}
+.custom-player.is-playing .custom-player__poster {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* iframe container */
+.custom-player__iframe-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.custom-player__iframe-wrap iframe {
+  width: 100%; height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Centre play button */
+.custom-player__play-btn {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background 0.25s ease, transform 0.25s ease, opacity 0.3s ease;
+}
+.custom-player__play-btn:hover {
+  background: rgba(184, 156, 110, 0.25);
+  border-color: var(--gold);
+  transform: translate(-50%, -50%) scale(1.08);
+}
+.custom-player.is-playing .custom-player__play-btn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Bottom control bar */
+.custom-player__bar {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 20px;
+  background: linear-gradient(to top, rgba(10,18,13,0.75) 0%, transparent 100%);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.custom-player.is-playing:hover .custom-player__bar,
+.custom-player.is-paused .custom-player__bar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.custom-player__toggle {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+.custom-player__toggle:hover {
+  background: rgba(184,156,110,0.3);
+  border-color: var(--gold);
+}
+
+.custom-player__label {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 767px) {
+  .custom-player { width: 100%; border-radius: 0; }
+  .custom-player__play-btn { width: 58px; height: 58px; }
+}
+
 /* ============================================================
    LIFESTYLE SLIDER SECTION
 ============================================================ */
@@ -4749,14 +4880,16 @@ body.about-page {
   transform: translateY(40px);
 }
 
-.project-card__image img {
+.project-card__image img,
+.project-card__video {
   width: 100%; height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.7s ease;
 }
 
-.project-card__image:hover img {
+.project-card__image:hover img,
+.project-card__image:hover .project-card__video {
   transform: scale(1.04);
 }
 
@@ -4856,6 +4989,32 @@ body.about-page {
 .project-divider {
   border-top: 1px solid var(--sand);
   margin: 0 auto;
+}
+
+.project-card__divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 36px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.project-card__divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.3;
+}
+
+.project-card__divider-text {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  white-space: nowrap;
 }
 
 /* ── Blog listing ── */

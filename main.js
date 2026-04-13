@@ -824,3 +824,89 @@ function formatDate(dateStr) {
     return dateStr;
   }
 }
+
+/* ============================================================
+   CUSTOM MINIMAL VIDEO PLAYER
+============================================================ */
+(function () {
+  const player   = document.getElementById('iraPlayer');
+  if (!player) return;
+
+  const vid      = player.dataset.vid;
+  const playBtn  = document.getElementById('iraPlayBtn');
+  const toggle   = document.getElementById('iraToggle');
+  const frameWrap = document.getElementById('iraPlayerFrame');
+  const iconPause = toggle.querySelector('.icon-pause');
+  const iconPlay  = toggle.querySelector('.icon-play');
+
+  let ytPlayer = null;
+  let started  = false;
+
+  /* Load YouTube IFrame API once */
+  function loadYTApi() {
+    if (window.YT && window.YT.Player) { initPlayer(); return; }
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    document.head.appendChild(tag);
+    window.onYouTubeIframeAPIReady = initPlayer;
+  }
+
+  function initPlayer() {
+    ytPlayer = new YT.Player(frameWrap, {
+      videoId: vid,
+      playerVars: {
+        controls: 1,       // required for unlisted/non-partner videos
+        rel: 0,            // no related videos at end
+        modestbranding: 1, // minimal YT branding
+        playsinline: 1,
+        iv_load_policy: 3, // no annotations
+      },
+      events: {
+        onReady: function (e) {
+          e.target.playVideo();
+          player.classList.add('is-playing');
+          player.classList.remove('is-paused');
+          started = true;
+        },
+        onStateChange: function (e) {
+          const s = e.data;
+          if (s === YT.PlayerState.PLAYING) {
+            player.classList.add('is-playing');
+            player.classList.remove('is-paused');
+            iconPause.style.display = '';
+            iconPlay.style.display  = 'none';
+          } else if (s === YT.PlayerState.PAUSED || s === YT.PlayerState.ENDED) {
+            player.classList.remove('is-playing');
+            player.classList.add('is-paused');
+            iconPause.style.display = 'none';
+            iconPlay.style.display  = '';
+          }
+        }
+      }
+    });
+  }
+
+  /* Click big play button — load API + start */
+  playBtn.addEventListener('click', function () {
+    if (!started) { loadYTApi(); }
+    else if (ytPlayer) { ytPlayer.playVideo(); }
+  });
+
+  /* Click anywhere on poster also starts */
+  player.querySelector('.custom-player__poster').addEventListener('click', function () {
+    if (!started) { loadYTApi(); }
+  });
+
+  /* Toggle play/pause */
+  toggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    if (!ytPlayer) return;
+    const state = ytPlayer.getPlayerState();
+    if (state === YT.PlayerState.PLAYING) {
+      ytPlayer.pauseVideo();
+    } else {
+      ytPlayer.playVideo();
+    }
+  });
+})();
+
