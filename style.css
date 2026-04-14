@@ -4982,7 +4982,7 @@ body.about-page {
   position: relative;
   border-radius: 3px;
   overflow: hidden;
-  aspect-ratio: 4/5;
+  aspect-ratio: 3/2;
   opacity: 0;
   transform: translateY(40px);
 }
@@ -5572,7 +5572,7 @@ body.about-page {
   gap: 24px;
 }
 .af-card__photo {
-  width: 100%;
+  width: 72%;
   aspect-ratio: 4/3;
   border-radius: 3px;
   overflow: hidden;
@@ -6338,4 +6338,86 @@ body.about-page {
   .blog-card__overlay { padding: 20px 22px 24px; gap: 6px; }
   .blog-card__tag { font-size: 0.6rem; }
   .blog-card__date { font-size: 0.6rem; }
+}
+
+/* ============================================================
+   TOP NAV — Comprehensive responsive (all inner pages)
+   Covers: 1400px large, 1280px (12-inch), 1024px (9-inch/tablet)
+============================================================ */
+
+/* Large desktop (1280–1440px) — slight tighten */
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .top-nav { padding: 0 36px; height: 76px; }
+  .top-nav__logo { height: 52px; }
+  .top-nav__name { font-size: 1rem; letter-spacing: 0.28em; }
+  .top-nav__list { gap: 32px; }
+  .top-nav__link { font-size: 0.73rem; letter-spacing: 0.13em; }
+  .top-nav__link--cta { padding: 8px 18px; font-size: 0.7rem; }
+}
+
+/* 12-inch laptop (1024–1280px) */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .top-nav {
+    padding: 0 28px;
+    height: 68px;
+    grid-template-columns: 1fr auto 1fr;
+  }
+  .top-nav__logo { height: 44px; }
+  .top-nav__name { font-size: 0.88rem; letter-spacing: 0.22em; }
+  .top-nav__list { gap: 24px; justify-content: flex-end; }
+  .top-nav__link { font-size: 0.7rem; letter-spacing: 0.11em; }
+  .top-nav__link--cta {
+    padding: 7px 14px;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    border-radius: 2px;
+  }
+}
+
+/* 9-inch / tablet landscape (768–1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .top-nav {
+    padding: 0 18px;
+    height: 60px;
+    grid-template-columns: auto 1fr auto;
+    gap: 0;
+  }
+
+  /* Brand — left aligned on tablet */
+  .top-nav__brand {
+    grid-column: 1;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .top-nav__logo { height: 36px; }
+  .top-nav__name { font-size: 0.78rem; letter-spacing: 0.2em; }
+
+  /* Links — right aligned */
+  .top-nav__list {
+    grid-column: 3;
+    gap: 16px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .top-nav__link {
+    font-size: 0.65rem;
+    letter-spacing: 0.09em;
+  }
+
+  /* CTA button — compact, stays proportional */
+  .top-nav__link--cta {
+    padding: 6px 12px;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+}
+
+/* About page dark nav overrides — same breakpoints */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-page .top-nav { padding: 0 18px; }
+  .about-page .top-nav__name { font-size: 0.78rem; }
+  .about-page .top-nav .top-nav__link { font-size: 0.65rem; }
+  .about-page .top-nav .top-nav__link--cta { padding: 6px 12px; font-size: 0.62rem; }
 }
