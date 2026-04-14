@@ -598,7 +598,7 @@ document.addEventListener('DOMContentLoaded', () => {
   try { initGalleryFade(); } catch (e) {}
 
 
-  // ---- Amenities Read More (mobile only) ----
+  // ---- Amenities Read More (all screens) ----
   const amenitiesToggle = document.getElementById('amenitiesToggle');
   const amenitiesExpand = document.getElementById('amenitiesExpand');
   if (amenitiesToggle && amenitiesExpand) {
@@ -606,6 +606,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const isOpen = amenitiesExpand.classList.toggle('is-open');
       amenitiesToggle.setAttribute('aria-expanded', isOpen);
       amenitiesToggle.childNodes[0].textContent = isOpen ? 'Read Less ' : 'Read More ';
+      if (isOpen) {
+        // Smooth scroll to expanded content
+        setTimeout(() => amenitiesExpand.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
+      }
     });
   }
 
