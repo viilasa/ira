@@ -532,29 +532,44 @@ function initGalleryFade() {
    14. CONTACT FORM — basic UX
 ---------------------------------------------------------- */
 function initContactForm() {
-  const form = document.querySelector('.contact-form');
-  if (!form) return;
+  const forms = document.querySelectorAll('.contact-form');
+  if (!forms.length) return;
 
-  form.addEventListener('submit', async e => {
-    e.preventDefault();
-    const btn = form.querySelector('[type="submit"]');
-    const orig = btn.textContent;
-    btn.textContent = 'Sending…';
-    btn.disabled = true;
+  forms.forEach(form => {
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const btn = form.querySelector('[type="submit"]');
+      if (!btn) return;
 
-    await new Promise(r => setTimeout(r, 1200));
+      const orig = btn.textContent;
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
 
-    btn.textContent = 'Sent — Thank You';
-    btn.style.setProperty('background-color', 'var(--gold)');
-    btn.style.setProperty('color', 'var(--white)');
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { Accept: 'application/json' },
+        });
 
-    setTimeout(() => {
-      btn.textContent = orig;
-      btn.disabled = false;
-      btn.style.removeProperty('background-color');
-      btn.style.removeProperty('color');
-      form.reset();
-    }, 4000);
+        if (!response.ok) throw new Error('Lead submit failed');
+
+        btn.textContent = 'Sent — Thank You';
+        btn.style.setProperty('background-color', 'var(--gold)');
+        btn.style.setProperty('color', 'var(--white)');
+        form.reset();
+      } catch (err) {
+        btn.textContent = 'Failed — Try Again';
+      } finally {
+        setTimeout(() => {
+          btn.textContent = orig;
+          btn.disabled = false;
+          btn.style.removeProperty('background-color');
+          btn.style.removeProperty('color');
+        }, 3500);
+      }
+    });
   });
 }
 

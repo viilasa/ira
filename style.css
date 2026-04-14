@@ -830,204 +830,114 @@ button {
 /* All placeholder sections have been built out */
 
 /* ============================================================
-   OVERVIEW SECTION — design-system colors only
+  OVERVIEW SECTION — two-column editorial layout
 ============================================================ */
 .overview {
   background-color: var(--ivory);
-}
-
-/* ── Philosophy intro ── */
-.overview__intro {
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-block: 80px 40px;
+  justify-content: center;
+  padding: clamp(20px, 2.4vw, 32px) clamp(14px, 2.2vw, 30px);
 }
 
-.overview__intro-inner {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 48px;
-  align-items: start;
+.overview__layout {
   width: 100%;
+  max-width: 820px;
+  display: grid;
+  grid-template-columns: minmax(230px, 300px) minmax(300px, 390px);
+  justify-content: center;
+  column-gap: clamp(20px, 3.2vw, 38px);
+  align-items: start;
+  margin-inline: auto;
 }
 
-@media (min-width: 768px) {
-  .overview__intro-inner {
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: center;
-    max-width: 860px;
-    margin-inline: auto;
-  }
-}
-
-/* "Welcome to IRA Estates" */
-.overview__heading {
-  font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  font-weight: 500;
-  font-style: italic;
-  line-height: 1.1;
-  color: var(--ink);
-  text-align: left;
-  margin-bottom: 24px;
-  letter-spacing: 0.01em;
-}
-
-/* Left column */
 .overview__left {
   display: flex;
   flex-direction: column;
-  padding-left: clamp(24px, 5vw, 80px);
+  align-items: flex-start;
+  justify-self: center;
 }
 
-/* Sub-lead */
-.overview__sublead {
+.overview__title {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin: 0 0 12px;
   font-family: var(--font-display);
-  font-size: clamp(1rem, 1.6vw, 1.2rem);
-  font-weight: 400;
+  font-size: clamp(1.7rem, 3.1vw, 2.8rem);
+  font-weight: 500;
   font-style: italic;
-  line-height: 1.6;
-  color: var(--gold);
-  max-width: 340px;
-  margin-bottom: 36px;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  color: var(--ink);
 }
 
-/* Coconut illustration */
-.overview__illus {
-  width: 180px;
+.overview__subtitle {
+  margin: 0;
+  max-width: 288px;
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 1.05vw, 1.12rem);
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--slate);
+}
+
+.overview__plant-wrap {
+  margin-top: clamp(16px, 2.6vw, 30px);
+}
+
+.overview__plant {
+  width: clamp(104px, 10.5vw, 142px);
   height: auto;
   display: block;
 }
 
-/* Right column */
 .overview__right {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.plant {
-  position: relative;
-  width: 170px;
-  height: 260px;
-}
-
-.plant__pot {
-  position: absolute;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 82px;
-  height: 58px;
-  background-color: var(--sand);
-  border-radius: 4px 4px 10px 10px;
-  clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
-}
-
-.plant__saucer {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 98px;
-  height: 10px;
-  background-color: var(--ash);
-  opacity: 0.4;
-  border-radius: 50%;
-}
-
-.plant__shadow {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 14px;
-  background: rgba(26, 26, 26, 0.07);
-  border-radius: 50%;
-  filter: blur(6px);
-}
-
-.plant__stem {
-  position: absolute;
-  bottom: 86px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 3px;
-  height: 44px;
-  background-color: var(--ash);
-  border-radius: 2px;
-}
-
-.plant__leaf {
-  position: absolute;
-}
-
-.plant__leaf--a {
-  width: 76px;
-  height: 94px;
-  top: 26px;
-  left: 10px;
-  transform: rotate(-35deg);
-  background-color: var(--slate);
-  border-radius: 50% 8% 50% 8%;
-  opacity: 0.75;
-}
-
-.plant__leaf--b {
-  width: 66px;
-  height: 82px;
-  top: 48px;
-  right: 8px;
-  transform: rotate(28deg);
-  background-color: var(--ash);
-  border-radius: 8% 50% 8% 50%;
-  opacity: 0.6;
-}
-
-.plant__leaf--c {
-  width: 56px;
-  height: 72px;
-  top: 92px;
-  left: 6px;
-  transform: rotate(-18deg);
-  background-color: var(--sand);
-  border-radius: 50% 8% 50% 8%;
-}
-
-.plant__leaf--d {
-  width: 50px;
-  height: 64px;
-  top: 112px;
-  right: 12px;
-  transform: rotate(20deg);
-  background-color: var(--sand);
-  border-radius: 8% 50% 8% 50%;
-  opacity: 0.7;
-}
-
-/* ── Right column (body copy) ── */
-.overview__right {
-  padding-block: 0;
+  margin-top: clamp(42px, 4.4vw, 66px);
+  max-width: 390px;
 }
 
 .overview__para {
+  margin: 0 0 12px;
   font-family: var(--font-body);
-  font-size: clamp(0.875rem, 1.05vw, 0.9375rem);
-  font-weight: 400;
-  line-height: 1.9;
+  font-size: clamp(0.78rem, 0.82vw, 0.86rem);
+  line-height: 1.5;
   color: var(--slate);
-  margin-bottom: 22px;
+  text-align: left;
 }
 
 .overview__signoff {
+  margin: 2px 0 0;
   font-family: var(--font-display);
-  font-size: 1.125rem;
+  font-size: clamp(0.9rem, 0.98vw, 1rem);
   font-style: italic;
-  font-weight: 400;
+  line-height: 1.45;
   color: var(--ink);
-  margin-top: 12px;
+  text-align: left;
+}
+
+@media (max-width: 900px) {
+  .overview {
+    min-height: auto;
+    padding: 56px 20px;
+  }
+
+  .overview__layout {
+    grid-template-columns: 1fr;
+    row-gap: 14px;
+  }
+
+  .overview__title {
+    justify-self: start;
+  }
+
+  .overview__right {
+    margin-top: 12px;
+  }
+
+  .overview__plant-wrap {
+    margin-top: 16px;
+  }
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -1771,7 +1681,7 @@ button {
 ============================================================ */
 .gallery-section {
   background-color: #080808;
-  padding-block: 40px 32px;
+  padding-block: clamp(56px, 8vh, 88px) clamp(44px, 6vh, 68px);
   overflow: hidden;
 }
 
@@ -1784,18 +1694,21 @@ button {
   color: var(--gold);
   margin-bottom: 28px;
   opacity: 0.8;
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 /* Swiper — coverflow */
 .gallery-swiper {
   width: 100%;
-  padding-bottom: 12px !important;
+  padding-bottom: 18px !important;
   overflow: visible;
 }
 
 /* Each slide */
 .gallery-swiper .swiper-slide {
-  width: 260px;
+  width: clamp(360px, 38vw, 520px);
 }
 
 .gallery-slide {
@@ -1806,15 +1719,16 @@ button {
 }
 
 .gallery-slide img {
-  width: 260px;
-  height: 360px;
+  width: clamp(360px, 38vw, 520px);
+  height: clamp(230px, 24vw, 320px);
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
 @media (max-width: 767px) {
-  .gallery-swiper .swiper-slide { width: 200px; }
-  .gallery-slide img { width: 200px; height: 280px; }
+  .gallery-swiper .swiper-slide { width: min(86vw, 320px); }
+  .gallery-slide img { width: min(86vw, 320px); height: min(52vw, 206px); }
 }
 
 /* Info overlay — only on active slide */
@@ -3020,19 +2934,19 @@ div.sitemap-slide__img {
    UPCOMING PROJECTS — transparent carousel
 ============================================================ */
 .upcoming-section {
-  background-color: var(--ivory);
-  padding: var(--section-pad-y) 0 60px;
-  border-top: 1px solid var(--sand);
+  background-color: #c4d7c4;
+  padding: clamp(48px, 6vh, 72px) 0 44px;
+  border-top: none;
   overflow: hidden;
 }
 
 .upcoming-section__header {
   text-align: center;
-  margin-bottom: 56px;
+  margin-bottom: 34px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
 }
 
 .upcoming-section__title {
@@ -3089,7 +3003,7 @@ div.sitemap-slide__img {
   grid-template-columns: 1fr 1fr;
   gap: 72px;
   align-items: center;
-  padding: 64px 0;
+  padding: 40px 0 34px;
 }
 
 /* Copy column */
@@ -3097,6 +3011,7 @@ div.sitemap-slide__img {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  padding-left: clamp(28px, 4vw, 56px);
 }
 
 .upcoming-slide__tag {
@@ -3587,11 +3502,10 @@ div.sitemap-slide__img {
 @media (min-width: 768px) and (max-width: 1024px) {
 
   /* Overview */
-  .overview__intro { padding-top: 100px; padding-bottom: 80px; }
-  .overview__grid { grid-template-columns: 1fr; gap: 40px; }
-  .overview__heading { font-size: 2.6rem; margin-bottom: 48px; }
-  .overview__sublead { max-width: 100%; }
-  .overview__plant img { max-width: 320px; }
+  .overview__title { font-size: clamp(2.4rem, 4.5vw, 3.8rem); }
+  
+
+
 
   /* Arrival */
   .arrival { min-height: 100vh; padding-top: 0; }
@@ -3678,11 +3592,8 @@ div.sitemap-slide__img {
   .hero__brand-name { font-size: 0.75rem; letter-spacing: 0.3em; }
 
   /* ── Overview ── */
-  .overview__intro { padding-top: 56px; padding-bottom: 48px; }
-  .overview__heading { font-size: 1.85rem; margin-bottom: 32px; }
-  .overview__grid { grid-template-columns: 1fr; gap: 32px; }
-  .overview__sublead { font-size: 1rem; max-width: 100%; margin-bottom: 24px; }
-  .overview__plant { display: block; margin-top: 16px; }
+  .overview__title { font-size: 1.85rem; }
+  .overview__subtitle { font-size: 0.95rem; }
   .overview__plant img { max-width: 220px; }
   .overview__para { font-size: 0.9rem; line-height: 1.8; margin-bottom: 16px; }
   .overview__signoff { font-size: 1rem; }
@@ -3918,7 +3829,7 @@ div.sitemap-slide__img {
 @media (max-width: 400px) {
   .hero__title { font-size: clamp(2.2rem, 12vw, 3rem); }
   .hero__sub-line { font-size: 0.55rem; }
-  .overview__heading { font-size: 1.65rem; }
+  .overview__title { font-size: 1.65rem; }
   .kasauli-intro__heading-lg { font-size: 1.45rem; }
   .nature-section__heading { font-size: 1.75rem; }
   .companions__heading { font-size: 1.6rem; }
@@ -5007,6 +4918,12 @@ body.about-page {
   transform: translateY(40px);
 }
 
+/* First project card image slightly taller to align with specs block */
+.project-card-section:first-of-type .project-card__image {
+  aspect-ratio: 4/5;
+  max-height: min(72vh, 680px);
+}
+
 .project-card__image img,
 .project-card__video {
   width: 100%; height: 100%;
@@ -5547,7 +5464,8 @@ body.about-page {
 .about-intro__image {
   border-radius: 3px;
   overflow: hidden;
-  aspect-ratio: 4/5;
+  aspect-ratio: 4/4.7;
+  max-height: min(76vh, 640px);
 }
 .about-intro__image img {
   width: 100%; height: 100%;
@@ -5818,16 +5736,15 @@ body.about-page {
   .hero__scroll { display: none; }
 
   /* Overview / Welcome */
-  .overview__intro { padding-block: 56px 40px; }
-  .overview__intro-inner {
+  .overview__centered {
     grid-template-columns: 1fr;
     gap: 32px;
     max-width: 100%;
   }
-  .overview__heading { font-size: clamp(2rem, 8vw, 2.6rem); margin-bottom: 16px; }
-  .overview__sublead { font-size: 1rem; line-height: 1.7; }
-  .overview__illus { max-width: 160px; margin-top: 8px; }
-  .overview__para { font-size: 0.9rem; }
+  .overview__title { font-size: clamp(2rem, 8vw, 2.6rem); }
+  .overview__subtitle { font-size: 0.95rem; line-height: 1.7; }
+  .overview__illus { width: 110px; }
+  .overview__para { font-size: 0.82rem; }
 
   /* Arrival landscape */
   .arrival { min-height: 70vh; }
@@ -6112,9 +6029,8 @@ body.about-page {
   .hero__content { padding-left: max(4vw, 40px); bottom: 72px; }
 
   /* ── Home sections ── */
-  .overview__intro { padding-block: 72px 56px; }
-  .overview__heading { font-size: clamp(2rem, 3.5vw, 3rem); }
-  .overview__para { font-size: 0.92rem; }
+  .overview__title { font-size: clamp(2rem, 3.5vw, 3rem); }
+  .overview__para { font-size: 0.88rem; }
 
   /* ── Arrival ── */
   .arrival__heading { font-size: clamp(2rem, 3.8vw, 3.4rem); }
@@ -6183,9 +6099,8 @@ body.about-page {
   .hero__descriptor { font-size: 0.65rem; margin-bottom: 20px; }
 
   /* ── Overview ── */
-  .overview__intro-inner { gap: 36px; }
-  .overview__heading { font-size: clamp(1.8rem, 3.2vw, 2.6rem); margin-bottom: 20px; }
-  .overview__para { font-size: 0.88rem; line-height: 1.75; }
+  .overview__title { font-size: clamp(1.8rem, 3.2vw, 2.6rem); }
+  .overview__para { font-size: 0.85rem; line-height: 1.75; }
   .overview__illus { width: 140px; }
 
   /* ── Arrival ── */
