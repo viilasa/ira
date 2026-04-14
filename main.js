@@ -600,17 +600,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ---- Amenities Read More (all screens) ----
   const amenitiesToggle = document.getElementById('amenitiesToggle');
+  const amenitiesToggleBottom = document.getElementById('amenitiesToggleBottom');
   const amenitiesExpand = document.getElementById('amenitiesExpand');
+
+  function syncAmenitiesState(isOpen) {
+    amenitiesExpand.classList.toggle('is-open', isOpen);
+    amenitiesToggle.setAttribute('aria-expanded', isOpen);
+    amenitiesToggle.textContent = isOpen ? 'Read Less ↑' : 'Read More ↓';
+    if (amenitiesToggleBottom) {
+      amenitiesToggleBottom.style.display = isOpen ? '' : 'none';
+    }
+    if (isOpen) {
+      setTimeout(() => amenitiesExpand.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
+    } else {
+      setTimeout(() => amenitiesToggle.scrollIntoView({ behavior: 'smooth', block: 'center' }), 80);
+    }
+  }
+
   if (amenitiesToggle && amenitiesExpand) {
+    if (amenitiesToggleBottom) amenitiesToggleBottom.style.display = 'none';
+
     amenitiesToggle.addEventListener('click', () => {
-      const isOpen = amenitiesExpand.classList.toggle('is-open');
-      amenitiesToggle.setAttribute('aria-expanded', isOpen);
-      amenitiesToggle.childNodes[0].textContent = isOpen ? 'Read Less ' : 'Read More ';
-      if (isOpen) {
-        // Smooth scroll to expanded content
-        setTimeout(() => amenitiesExpand.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
-      }
+      syncAmenitiesState(!amenitiesExpand.classList.contains('is-open'));
     });
+
+    if (amenitiesToggleBottom) {
+      amenitiesToggleBottom.addEventListener('click', () => syncAmenitiesState(false));
+    }
   }
 
   // ---- Form ----

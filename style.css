@@ -348,15 +348,22 @@ button {
 .mobile-nav__footer {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   color: var(--ash);
   padding-top: 32px;
   border-top: 1px solid var(--sand);
 }
 
-.mobile-nav__footer span {
+.mobile-nav__logo {
+  height: 52px;
+  width: auto;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.mobile-nav__wordmark {
   font-family: var(--font-body);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.35em;
   text-transform: uppercase;
@@ -628,9 +635,9 @@ button {
   bottom: 80px;
   left: 0;
   z-index: 2;
-  padding-left: max(5vw, 52px);
+  padding-left: max(9vw, 100px);
   padding-right: 40px;
-  max-width: 680px;
+  max-width: 720px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -871,6 +878,7 @@ button {
 .overview__left {
   display: flex;
   flex-direction: column;
+  padding-left: clamp(24px, 5vw, 80px);
 }
 
 /* Sub-lead */
@@ -2421,6 +2429,18 @@ img.lifestyle-slide__graphic {
 .sustain-card__readmore::after { content: '↓'; transition: transform 0.3s ease; }
 .sustain-card__readmore[aria-expanded="true"]::after { content: '↑'; }
 .sustain-card__readmore[aria-expanded="true"] { border-bottom: 1px solid rgba(26,26,26,0.08); }
+
+/* Bottom Read Less button — sits inside expandable, centred */
+.sustain-card__readless {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 32px;
+  border-top: 1px solid rgba(26,26,26,0.08);
+  border-bottom: none;
+  padding-top: 20px;
+}
+.sustain-card__readless::after { content: none; }
 
 /* Expandable — collapsed by default */
 .sustain-card__expandable {
