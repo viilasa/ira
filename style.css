@@ -635,7 +635,7 @@ button {
   bottom: 80px;
   left: 0;
   z-index: 2;
-  padding-left: max(9vw, 100px);
+  padding-left: clamp(180px, 18vw, 360px);
   padding-right: 40px;
   max-width: 720px;
   display: flex;
@@ -6026,7 +6026,7 @@ body.about-page {
   .hero__logo { height: 80px; }
   .hero__title { font-size: 0.92rem; }
   .hero__caption { font-size: clamp(2.6rem, 5.5vw, 5rem); }
-  .hero__content { padding-left: max(4vw, 40px); bottom: 72px; }
+  .hero__content { padding-left: clamp(120px, 12vw, 220px); bottom: 72px; }
 
   /* ── Home sections ── */
   .overview__title { font-size: clamp(2rem, 3.5vw, 3rem); }
@@ -6095,7 +6095,7 @@ body.about-page {
   .hero__logo { height: 62px; }
   .hero__title { font-size: 0.78rem; }
   .hero__caption { font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.1; }
-  .hero__content { padding-left: 36px; bottom: 60px; max-width: 580px; }
+  .hero__content { padding-left: clamp(72px, 9vw, 140px); bottom: 60px; max-width: 580px; }
   .hero__descriptor { font-size: 0.65rem; margin-bottom: 20px; }
 
   /* ── Overview ── */
