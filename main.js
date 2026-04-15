@@ -690,11 +690,12 @@ function initSectionIndicator() {
     { id: 'residences', label: 'Residences' },
     { id: 'amenities',  label: 'Amenities' },
     { id: 'location',   label: 'Location' },
-    { id: 'contact',    label: 'Enquire' },
+    { id: 'upcoming',   label: 'Upcoming' },
+    { id: 'contact',    label: 'Contact' },
   ];
 
   // Light-background section IDs — indicator goes dark
-  const lightSections = new Set(['overview', 'residences', 'amenities', 'location', 'contact']);
+  const lightSections = new Set(['overview', 'residences', 'amenities', 'location', 'upcoming', 'contact']);
 
   let current = 0;
 

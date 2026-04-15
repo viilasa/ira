@@ -6246,6 +6246,10 @@ body.about-page {
   /* Gallery */
   .gallery-section { padding-block: 40px 32px; }
   .gallery-slide { height: 50vw; max-height: 520px; }
+  .inner-page .gallery-slide img {
+    width: 100%;
+    height: 100%;
+  }
 
   /* Floor plan / specs */
   .sitemap-section { padding-block: 40px 32px; }
