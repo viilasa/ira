@@ -245,12 +245,22 @@ export default function Projects() {
             <div className="swiper-wrapper">
               <div className="swiper-slide">
                 <div className="sitemap-slide">
-                  <img className="sitemap-slide__img" src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775774002/sm_k1qmxi.png" alt="Site map" loading="lazy" decoding="async" />
+                  <img className="sitemap-slide__img" src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1776720104/8_vtma2l.svg" alt="Site plan — slide 1" loading="lazy" decoding="async" />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="sitemap-slide">
-                  <img className="sitemap-slide__img" src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775774081/Untitled_design_5_gahdcy.svg" alt="Site plan" loading="lazy" decoding="async" />
+                  <img className="sitemap-slide__img" src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1776720105/5_e12omt.svg" alt="Site plan — slide 2" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <div className="swiper-slide">
+                <div className="sitemap-slide">
+                  <img className="sitemap-slide__img" src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1776720105/7_jnrlvs.svg" alt="Site plan — slide 3" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <div className="swiper-slide">
+                <div className="sitemap-slide">
+                  <img className="sitemap-slide__img" src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1776720106/6_vkgasw.svg" alt="Site plan — slide 4" loading="lazy" decoding="async" />
                 </div>
               </div>
             </div>

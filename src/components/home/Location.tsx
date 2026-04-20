@@ -25,7 +25,7 @@ export default function Location() {
         </div>
         <div className="companions__illus">
           <img
-            src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775728152/3a_ngieoo.svg"
+            src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1776544748/234_vmeqam.jpg"
             alt="Goa lifestyle illustration"
             loading="lazy"
             decoding="async"

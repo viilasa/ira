@@ -570,8 +570,16 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 /* ============================================================
    AMENITIES / SUSTAIN CARD
 ============================================================ */
+.home-continuous-bg {
+  background-image: url('https://res.cloudinary.com/ddhhlkyut/image/upload/v1776549475/wrapper_3421_wpbgjt.svg');
+  background-size: auto 100%;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
 .amenities {
-  background-color: var(--white);
+  background-color: transparent;
   padding-block: 48px;
 }
 @media (max-width: 767px) { .amenities { padding-block: 0; } }
@@ -764,7 +772,11 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 /* ============================================================
    LOCATION / COMPANIONS
 ============================================================ */
-.location { background-color: var(--white); }
+.location { background-color: transparent; }
+.home-continuous-bg .companions { background-color: transparent; }
+.home-continuous-bg .companions__illus { display: none; }
+.home-continuous-bg .companions { grid-template-columns: 1fr; }
+.home-continuous-bg .sustain-card { background-color: rgba(245, 240, 232, 0.92); backdrop-filter: blur(2px); }
 
 .companions {
   display: grid;
@@ -843,11 +855,19 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 @media (max-width: 767px) {
-  .companions { grid-template-columns: 1fr; height: auto; max-height: none; }
-  .companions__copy { padding: 64px 24px 40px; max-width: 100%; }
+  .home-continuous-bg { background-image: none; }
+  .home-continuous-bg .companions__illus { display: none; }
+  .home-continuous-bg .companions { grid-template-columns: 1fr; }
+  .companions {
+    height: auto;
+    max-height: none;
+    background-image: url('https://res.cloudinary.com/ddhhlkyut/image/upload/v1776546989/wrapar_xkuz3t.svg');
+    background-size: 55%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+  }
+  .companions__copy { padding: 48px 16px 48px 24px; max-width: 65%; }
   .companions__body { padding-left: 0; }
-  .companions__illus { position: static; width: 100%; height: auto; margin-top: -60px; order: 1; }
-  .companions__illus img { width: 100%; height: auto; object-position: center bottom; }
 }
 
 /* ============================================================
@@ -1802,32 +1822,36 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 /* Floor plans */
 .sitemap-section {
   background-color: var(--white);
-  padding-block: 72px 0;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .sitemap-swiper {
-  width: 78%;
-  max-width: 960px;
+  width: 92%;
+  max-width: 1200px;
+  flex: 1;
+  min-height: 0;
 }
 .sitemap-slide {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 0 48px;
+  height: 100%;
 }
 .sitemap-slide__img {
   display: block;
   width: auto;
   max-width: 100%;
-  max-height: 560px;
+  height: 100%;
+  max-height: calc(100vh - 140px);
   object-fit: contain;
   margin: 0 auto;
 }
 .sitemap-bar {
-  width: 78%;
-  max-width: 960px;
+  width: 92%;
+  max-width: 1200px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1878,7 +1902,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 @media (max-width: 767px) {
   .sitemap-swiper { width: 94%; }
   .sitemap-bar { width: 94%; padding-bottom: 36px; }
-  .sitemap-slide__img { max-height: 260px; }
+  .sitemap-slide__img { max-height: calc(100vh - 160px); }
 }
 
 /* Specs */
@@ -2173,7 +2197,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 
   /* Sitemap */
   .sitemap-section { padding-block: 60px 0; }
-  .sitemap-slide__img { max-height: 440px; }
+  .sitemap-slide__img { max-height: calc(100vh - 140px); }
 
   /* Blog */
   .blog-hero { padding: 88px 0 0; }
@@ -2262,7 +2286,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   .gallery-section { padding-block: 52px 40px; }
   .gallery-slide img { height: clamp(200px, 22vw, 260px); }
 
-  .sitemap-slide__img { max-height: 420px; }
+  .sitemap-slide__img { max-height: calc(100vh - 140px); }
 
   .specs-section { padding-block: 72px 44px; }
 

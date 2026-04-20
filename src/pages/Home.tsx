@@ -26,8 +26,10 @@ export default function Home() {
         <Hero />
         <Overview />
         <Residences />
-        <Amenities />
-        <Location />
+        <div className="home-continuous-bg">
+          <Amenities />
+          <Location />
+        </div>
         <UpcomingProjects />
         <ContactFormSection />
       </main>

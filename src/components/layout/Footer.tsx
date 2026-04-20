@@ -9,8 +9,8 @@ export default function Footer() {
         </p>
         <div className="footer-monkey">
           <img
-            src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775636686/leaves_hwhm2k.svg"
-            alt=""
+            src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1776720994/logo1Vines_hvxlrx.svg"
+            alt="IRA Estates"
             loading="lazy"
             decoding="async"
           />
