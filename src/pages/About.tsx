@@ -85,14 +85,14 @@ export default function About() {
                 Built on restraint, craft,<br />and a deep respect for place.
               </p>
             </div>
-            <div className="about-hero__illus reveal" data-delay="0.2">
+            {/* <div className="about-hero__illus reveal" data-delay="0.2">
               <img
                 src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1776110910/a-minimal-luxury-editorial-illustration-of-a-small_rq6au5.svg"
                 alt="IRA Estates illustration"
                 loading="lazy"
                 decoding="async"
               />
-            </div>
+            </div> */}
           </div>
         </section>
 

@@ -81,7 +81,7 @@ export default function Projects() {
         {/* Hero */}
         <div className="projects-hero">
           <img
-            src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1775816450/minimal-editorial-illustration-of_h2fitg.svg"
+            src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1776800342/pro_djrgy9.png"
             alt="IRA Estates — Where the sea sets the pace"
             loading="eager"
             decoding="async"
