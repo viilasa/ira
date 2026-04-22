@@ -25,7 +25,15 @@ export default function Location() {
         </div>
         <div className="companions__illus">
           <img
-            src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1776544748/234_vmeqam.jpg"
+            className="companions__illus-desktop"
+            src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1776549475/wrapper_3421_wpbgjt.svg"
+            alt="Goa lifestyle illustration"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            className="companions__illus-mobile"
+            src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1776887333/wrapper_Mobile_VIew_sengsi.svg"
             alt="Goa lifestyle illustration"
             loading="lazy"
             decoding="async"

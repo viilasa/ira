@@ -69,7 +69,7 @@ export default function About() {
 
   return (
     <div className="inner-page about-page">
-      <Hamburger forceDark />
+      <Hamburger />
       <TopNav />
 
       <main className="about-main">

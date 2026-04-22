@@ -849,6 +849,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   object-position: right bottom;
   display: block;
 }
+.companions__illus img.companions__illus-mobile { display: none; }
 
 @media (max-width: 1200px) {
   .companions__copy { padding: 48px 0 48px 36px; }
@@ -862,10 +863,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   .companions {
     height: auto;
     max-height: none;
-    background-image: url('https://res.cloudinary.com/ddhhlkyut/image/upload/v1776546989/wrapar_xkuz3t.svg');
-    background-size: 55%;
-    background-position: right bottom;
-    background-repeat: no-repeat;
+    background-image: none;
   }
   .companions__copy { padding: 48px 16px 48px 24px; max-width: 65%; }
   .companions__body { padding-left: 0; }
@@ -1459,6 +1457,15 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 @media (max-width: 767px) {
   .projects-hero { margin-top: -56px; height: 100svh; }
+  .projects-hero > img {
+    transform: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
 }
 .projects-hero__text {
   position: absolute;
@@ -1479,8 +1486,8 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 @media (max-width: 767px) {
   .projects-hero__text {
-    bottom: auto; top: 50%; left: 16px; right: 16px;
-    transform: translateY(-50%); max-width: 100%; padding: 20px 20px 18px;
+    top: auto; bottom: 28%; left: 16px; right: 16px;
+    transform: none; max-width: 100%; padding: 20px 20px 18px;
   }
 }
 .projects-hero__eyebrow {
@@ -1901,9 +1908,10 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .sitemap-swiper__next::after { font-size: 0.85rem !important; }
 
 @media (max-width: 767px) {
+  .sitemap-section { height: 60vh; min-height: 360px; }
   .sitemap-swiper { width: 94%; }
   .sitemap-bar { width: 94%; padding-bottom: 36px; }
-  .sitemap-slide__img { max-height: calc(100vh - 160px); }
+  .sitemap-slide__img { max-height: calc(60vh - 120px); }
 }
 
 /* Specs */
@@ -2041,7 +2049,52 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 ============================================================ */
 @media (max-width: 767px) {
   .sustain-card { padding: 0 24px; }
-  .companions { padding: 0 24px; }
+  .companions {
+    padding: 0;
+    grid-template-columns: 1fr;
+    height: auto;
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .companions__copy {
+    padding: 48px 24px 24px;
+    max-width: 100%;
+    order: 1;
+    padding-top: 32px;
+  }
+  .companions__body { padding-left: 0; }
+  .companions__illus {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: auto;
+    width: 160%;
+    height: 150%;
+    display: flex !important;
+    align-items: flex-end;
+    z-index: 0;
+  }
+  .companions__illus img.companions__illus-desktop { display: none !important; }
+  .companions__illus img.companions__illus-mobile {
+    display: block !important;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: right bottom;
+  }
+  .home-continuous-bg .companions__illus { display: block !important; }
+  .companions {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    min-height: 480px;
+  }
+  .companions__copy {
+    position: relative;
+    z-index: 2;
+    max-width: 60%;
+  }
   .footer-main { padding: 48px 24px 36px; }
   .about-hero { min-height: 50vh; padding: 100px 0 60px; }
 }
