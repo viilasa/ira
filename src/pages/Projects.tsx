@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Hamburger from '../components/layout/Hamburger'
 import TopNav from '../components/layout/TopNav'
 import Footer from '../components/layout/Footer'
@@ -31,17 +31,9 @@ const gallerySlides = [
   { src: 'https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775738315/Cameraview_9_a8qrge.jpg', alt: 'Villa exterior', type: 'Villa Type I', room: 'Exterior View' },
 ]
 
-/** Free-licensed pickleball imagery; ordered fallbacks if a CDN fails to load. */
-const AMENITIES_PICKLEBALL_SOURCES = [
-  'https://images.unsplash.com/photo-1753901821774-22a88913130f?auto=format&fit=crop&w=1200&q=85',
-  'https://images.unsplash.com/photo-1769911111880-b9cc416dc03a?auto=format&fit=crop&w=1200&q=85',
-  'https://images.unsplash.com/photo-1554068865-24cecd911e13?auto=format&fit=crop&w=1200&q=85',
-]
-
 export default function Projects() {
   useLenis()
   useScrollReveal()
-  const [pickleballImgIx, setPickleballImgIx] = useState(0)
 
   useEffect(() => {
     document.title = 'Our Projects — Luxury Villas in Goa & Kasauli | IRA Estates'
@@ -250,12 +242,8 @@ export default function Projects() {
                   <img
                     src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1778070550/oickel_ball_gygddh.png"
                     alt="Outdoor pickleball court"
-                    referrerPolicy="no-referrer"
                     loading="lazy"
                     decoding="async"
-                    onError={() =>
-                      setPickleballImgIx((i) =>
-                        i < AMENITIES_PICKLEBALL_SOURCES.length - 1 ? i + 1 : i)}
                   />
                 </div>
                 <figcaption className="amenities-showcase__caption">
