@@ -342,7 +342,7 @@ export default function Projects() {
             <div className="specs-col">
               <h3 className="specs-col__heading reveal">Specifications</h3>
               <ul className="specs-col__list reveal" data-delay="0.05">
-                {['Jindal Steel structural framework', 'RCC framed earthquake-resistant structure', 'High plinth-levels with damp-proofing below ground floor', 'Waterproofing for terraces and pool decks', 'Indo-Portuguese aluminium windows with Georgian bars — double-glazed', 'Legrand modular electrical switches and fittings', 'Premium sanitaryware and CP fittings', 'Health faucets and frameless mirrors in all bathrooms', 'Masonry brickwork executed with rubble stone', 'Built-in cat cabling for satellite TV and high-speed internet',  'Private swimming pool with deck — each villa', 'Individually landscaped gardens'].map(s => <li key={s}>{s}</li>)}
+                {['Jindal Steel structural framework', 'RCC framed earthquake-resistant structure', 'Masonry brickwork executed with rubble stone', 'High plinth-levels with damp-proofing below ground floor', 'Waterproofing for terraces and pool decks', 'Indo-Portuguese aluminium windows with Georgian bars — double-glazed', 'Legrand modular electrical switches and fittings', 'Premium sanitaryware and CP fittings', 'Built-in cat cabling for satellite TV and high-speed internet', 'Private swimming pool with deck — each villa', 'Individually landscaped gardens'].map(s => <li key={s}>{s}</li>)}
               </ul>
             </div>
             <div className="specs-col">
