@@ -149,16 +149,14 @@ export default function About() {
               <div className="af-card__photo">
                 <img
                   src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1779369950/IMG-20260521-WA0003_2_unxwtz.jpg"
-                  alt="IRA Estates founder"
+                  alt="IRA Estates founders"
                   loading="lazy"
                   decoding="async"
                 />
               </div>
-              <div className="af-card__copy">
-                <h3 className="af-card__name">Founder Name</h3>
-                <span className="af-card__role">Founder &amp; Vision</span>
-                <p className="af-card__bio">Add your founder's story here — their background, what drives them, and their vision for IRA Estates.</p>
-              </div>
+              <p className="af-card__bio reveal" data-delay="0.16">
+                Built on trust, relationships, and a deep understanding of real estate, the founders of IRA Estates set out with a simple vision — to make property buying more transparent, personal, and rewarding. With years of experience and a passion for helping people find more than just homes, they created IRA Estates to deliver honest guidance, smart investments, and spaces that truly feel like a legacy.
+              </p>
             </div>
           </div>
         </section>
