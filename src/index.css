@@ -1348,14 +1348,35 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .about-founder-section__inner {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-areas:
+    "head"
+    "photo"
+    "body";
   gap: 60px;
   min-width: 0;
 }
-.about-founder-section__intro {
-  min-width: 0;
+.about-founder-section__intro-head { grid-area: head; min-width: 0; }
+.about-founder-section__intro-body { grid-area: body; min-width: 0; }
+.about-founder-section__inner > .af-card { grid-area: photo; }
+@media (min-width: 768px) {
+  .about-founder-section__inner {
+    grid-template-columns: 0.85fr 1.25fr;
+    grid-template-areas:
+      "head photo"
+      "body photo";
+    align-items: start;
+  }
+  .about-founder-section__inner > .af-card {
+    grid-row: 1 / -1;
+    align-self: start;
+  }
 }
-@media (min-width: 768px) { .about-founder-section__inner { grid-template-columns: 0.85fr 1.25fr; align-items: start; } }
-@media (min-width: 1024px) { .about-founder-section__inner { grid-template-columns: 0.8fr 1.35fr; gap: 72px; } }
+@media (min-width: 1024px) {
+  .about-founder-section__inner {
+    grid-template-columns: 0.8fr 1.35fr;
+    gap: 72px;
+  }
+}
 .about-founder-section__heading {
   font-family: var(--font-display);
   font-size: clamp(2rem, 3.5vw, 3rem);
@@ -1421,6 +1442,10 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   }
   .about-founder-section__inner {
     gap: 36px;
+    grid-template-areas:
+      "head"
+      "photo"
+      "body";
   }
   .about-founder-section__heading {
     font-size: clamp(1.75rem, 8vw, 2.25rem);

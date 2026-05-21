@@ -136,11 +136,23 @@ export default function About() {
         {/* Founder */}
         <section className="about-founder-section">
           <div className="about-founder-section__inner container">
-            <div className="about-founder-section__intro">
+            <div className="about-founder-section__intro-head">
               <span className="eyebrow reveal" style={{ color: 'var(--gold)' }}>The Person Behind IRA</span>
               <h2 className="about-founder-section__heading reveal" data-delay="0.08">
                 Born from vision.<br />Built with attention.
               </h2>
+            </div>
+            <div className="af-card reveal" data-delay="0.1">
+              <div className="af-card__photo">
+                <img
+                  src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto,f_auto/v1779369690/IMG-20260521-WA0003_c2blbs.jpg"
+                  alt="IRA Estates founders"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+            <div className="about-founder-section__intro-body">
               <p className="about-founder-section__body reveal" data-delay="0.14">
                 Born from a deeply personal vision, it takes its name from my niece, Ira — a name that carries light, innocence, and new beginnings. What began as a desire to create something meaningful for family evolved into the core philosophy of the company: that luxury should be quiet, craft should be considered, and the finest homes are those that know exactly where they are.
               </p>
@@ -153,16 +165,6 @@ export default function About() {
               <p className="about-founder-section__note reveal" data-delay="0.24">
                 — founders note by Raunak bhandari
               </p>
-            </div>
-            <div className="af-card reveal" data-delay="0.1">
-              <div className="af-card__photo">
-                <img
-                  src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto,f_auto/v1779369690/IMG-20260521-WA0003_c2blbs.jpg"
-                  alt="IRA Estates founders"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
             </div>
           </div>
         </section>
