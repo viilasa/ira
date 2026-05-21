@@ -147,12 +147,12 @@ export default function About() {
             </div>
             <div className="af-card reveal" data-delay="0.1">
               <div className="af-card__photo">
-                <div className="af-card__placeholder">
-                  <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.8">
-                    <circle cx="12" cy="8" r="4" /><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-                  </svg>
-                  <span>Founder Photo</span>
-                </div>
+                <img
+                  src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1779369950/IMG-20260521-WA0003_2_unxwtz.jpg"
+                  alt="IRA Estates founder"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <div className="af-card__copy">
                 <h3 className="af-card__name">Founder Name</h3>
