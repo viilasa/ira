@@ -348,7 +348,7 @@ export default function Projects() {
             <div className="specs-col">
               <h3 className="specs-col__heading reveal">Interiors</h3>
               <ul className="specs-col__list reveal" data-delay="0.05">
-                {['Premium floor design by a reputed Goan interior designer', 'A beautifully modular kitchen with installed hob & chimney', 'Gypsum ceilings with decorative light fixtures', 'Ambient and mood lighting throughout', 'Glass partitions in bathrooms', 'Decorative wall finishes and feature walls', 'Handcrafted terrazzo accents', 'Tropical landscape design by specialists', 'Outdoor terrace furniture provision'].map(s => <li key={s}>{s}</li>)}
+                {['Beautiful modular kitchen with hob and chimney', 'Gypsum ceilings with decorative light fixtures', 'Ambient and mood lighting throughout', 'Glass partitions in bathrooms', 'Decorative wall finishes and feature walls', 'Handcrafted terrazzo accents', 'Tropical landscape design by specialists', 'Outdoor terrace furniture provision'].map(s => <li key={s}>{s}</li>)}
               </ul>
             </div>
             <div className="specs-illus-col reveal" data-delay="0.1">
