@@ -144,6 +144,9 @@ export default function About() {
               <p className="about-founder-section__body reveal" data-delay="0.14">
                 IRA Estates was never just a company — it was a calling. Born from the vision of someone who believed that luxury should be quiet, craft should be considered, and the finest home is the one that knows exactly where it is.
               </p>
+              <p className="about-founder-section__note reveal" data-delay="0.2">
+                — founders note by Raunak bhandari
+              </p>
             </div>
             <div className="af-card reveal" data-delay="0.1">
               <div className="af-card__photo">
