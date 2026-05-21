@@ -45,7 +45,7 @@ export const blogs: BlogPost[] = [
     title: 'Investing in Goa Real Estate in 2026: What the Numbers Say',
     tag: 'Investment',
     date: '5 February 2026',
-    cover: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop',
+    cover: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop',
     excerpt: 'Luxury villa values in South Goa have appreciated 18–24% year-on-year since 2022. But the more interesting story is in the rental yields.',
     author: 'IRA Estates',
     readTime: '7 min read',

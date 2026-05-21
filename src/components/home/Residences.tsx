@@ -21,9 +21,9 @@ export default function Residences() {
           </div>
           <p className="nature-section__body reveal" data-delay="0.2">
             A private pool, landscaped gardens, and generous open-plan living spaces define
-            every home. Interiors are finished with premium Kohler and Jaguar fittings,
-            Legrand electrical systems, and UPVC Fenesta windows — combining elegance with
-            enduring quality.
+            every home. Interiors pair premium sanitary and CP fittings, Legrand electrical
+            systems, and Indo-Portuguese aluminium glazing with Georgian bars — elegance shaped
+            to last.
           </p>
           <div className="botanical reveal" data-delay="0.3">
             <img

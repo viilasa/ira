@@ -25,7 +25,15 @@ export default function Footer() {
         <Link to="/contact" className="footer-cta reveal">ENQUIRE ABOUT NIRVANA MANSION</Link>
       </div>
       <div className="footer-bottom">
-        <span className="footer-bottom__copy">IRA Estates · Luxury Villas · South Goa</span>
+        <div className="footer-bottom__lead">
+          <span className="footer-bottom__copy">IRA Estates · Luxury Villas · South Goa</span>
+          <p className="footer-bottom__credits">
+            Made by{' '}
+            <a href="https://www.venilabs.viilasa.com" target="_blank" rel="noopener noreferrer">
+              viilasa
+            </a>
+          </p>
+        </div>
         <p className="footer-bottom__disclaimer">
           Disclaimer: All renders, images, and specifications are indicative and subject to change at the sole discretion of IRA Estates. This communication does not constitute an offer or agreement of sale. Interested parties are advised to conduct their own due diligence.
         </p>

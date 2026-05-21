@@ -13,8 +13,8 @@ const promiseCards = [
         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" />
       </svg>
     ),
-    title: 'Concierge as Culture',
-    back: 'A dedicated concierge who anticipates your needs before you voice them — from restaurant reservations to last-minute arrangements. Service that feels personal, never transactional.',
+    title: 'Private chefs & chauffeur — one call away',
+    back: 'For a select few, everyday ease means private chefs and a chauffeur arranged when you choose — thoughtfully handled and never loud about itself.',
   },
   {
     icon: (

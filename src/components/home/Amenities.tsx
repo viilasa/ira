@@ -13,8 +13,8 @@ const features = [
   {
     title: 'Premium Interiors & Fittings',
     body: [
-      'Kohler and Jaguar sanitaryware, Legrand modular switches, UPVC Fenesta windows, and Jindal Steel structural elements are standard across all villas.',
-      'Italian marble and premium stone flooring, modular kitchens with hob and chimney, and ambient mood lighting complete the picture of understated luxury.',
+      'Premium sanitaryware and CP fittings, Legrand modular switches, Indo-Portuguese aluminium glazing with Georgian bars, and Jindal Steel structural elements are standard across all villas.',
+      'Flooring designed by a reputed Goan interior studio, modular kitchens with hob and chimney, Cat 6-ready infrastructure, and ambient mood lighting complete the picture.',
     ],
   },
   {
@@ -47,7 +47,7 @@ export default function Amenities() {
                 Mansion has been curated with that conviction.
               </p>
               <p className="sustain-card__para reveal">
-                From Kohler and Jaguar sanitaryware to Legrand electrical
+                From premium sanitary fittings to Legrand electrical
                 systems and Jindal Steel structures, we partner only with
                 brands that share our commitment to lasting excellence.
               </p>
@@ -84,7 +84,7 @@ export default function Amenities() {
                 Mansion has been curated with that conviction.
               </p>
               <p className="sustain-card__para">
-                From Kohler and Jaguar sanitaryware to Legrand electrical
+                From premium sanitary fittings to Legrand electrical
                 systems and Jindal Steel structures, we partner only with
                 brands that share our commitment to lasting excellence.
               </p>

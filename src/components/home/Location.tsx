@@ -16,10 +16,10 @@ export default function Location() {
               of South Goa is not a drive away — it is a way of life here.
             </p>
             <p className="companions__para reveal" data-delay="0.22">
-              Margao city and its markets lie 10 km north. Goa International Airport is
-              40 km away. Dudhsagar Falls, the Salim Ali Bird Sanctuary, and the tranquil
-              backwaters of Cavelossim are all within easy reach. At IRA Estates, your
-              world is perfectly positioned.
+              The Salim Ali Bird Sanctuary and the tranquil backwaters of Cavelossim are
+              within reach when you crave a quieter day. At IRA Estates, your address keeps
+              the best of the region effortlessly within reach — without tying you to a long
+              list of timings and distances.
             </p>
           </div>
         </div>

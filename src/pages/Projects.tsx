@@ -103,7 +103,7 @@ export default function Projects() {
             </div>
             <div className="projects-hero__stat-divider" />
             <div className="projects-hero__stat">
-              <span className="projects-hero__stat-val">4 BHK</span>
+              <span className="projects-hero__stat-val">4–5 BHK</span>
               <span className="projects-hero__stat-label">Private Pool Villas</span>
             </div>
             <div className="projects-hero__stat-divider" />
@@ -119,19 +119,19 @@ export default function Projects() {
           <div className="project-card container">
             <div className="project-card__image reveal">
               <img src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775738310/Cameraview_5_h0pvoc.jpg" alt="IRA Estates Goa" loading="lazy" decoding="async" />
-              <span className="project-card__status project-card__status--ongoing">Ongoing</span>
+              <span className="project-card__status project-card__status--ongoing">Structure complete</span>
             </div>
             <div className="project-card__info">
               <span className="eyebrow reveal">Project 01</span>
               <h2 className="project-card__name reveal" data-delay="0.06">IRA Estates<br />Benaulim, South Goa</h2>
-              <p className="project-card__desc reveal" data-delay="0.1">Eight exclusive 4BHK private pool villas set on a sheltered coastal site two minutes from Benaulim beach. Designed to disappear into the landscape while providing every comfort of a considered luxury residence.</p>
+              <p className="project-card__desc reveal" data-delay="0.1">Eight exclusive 4–5 BHK private pool villas set on a sheltered coastal site two minutes from Benaulim beach. Designed to disappear into the landscape while providing every comfort of a considered luxury residence.</p>
               <ul className="project-card__specs reveal" data-delay="0.14">
                 {[
                   ['Location', 'Benaulim, South Goa — 403716'],
-                  ['Type', '4 BHK Private Pool Villas'],
+                  ['Type', '4–5 BHK Private Pool Villas'],
                   ['Units', '8 Exclusive Residences'],
-                  ['Plot Size', '2,100 sqm per villa'],
-                  ['Status', 'Ongoing Construction'],
+                  ['Built on', '3,400 sqm'],
+                  ['Status', 'Structure complete'],
                   ['Possession', 'Available on enquiry'],
                 ].map(([label, val]) => (
                   <li key={label}>
@@ -187,10 +187,12 @@ export default function Projects() {
             <div className="kasauli-block-2__copy">
               <h2 className="kasauli-block-2__heading reveal">Nirvana Mansions Amenities</h2>
               <p className="kasauli-block-2__para reveal" data-delay="0.05">
-                Just minutes from Benaulim Beach, IRA Estates places you at the intersection of Goa's finest pleasures — sun-warmed sands, world-class dining, water sports, and a thriving arts and culture scene, all within effortless reach.
+                IRA Estates places you amid South Goa at its strongest — shoreline light,
+                considered dining, and a pace that prefers depth over rush. Everything you need
+                to live well is woven into everyday life.
               </p>
               <p className="kasauli-block-2__para reveal" data-delay="0.15">
-                Dudhsagar Falls is 60 km away. Margao railway station lies 10 km to the north. Goa International Airport connects you to the world in just 40 minutes.
+                Benaulim Beach is 900 m away. Goa International Airport connects you to the world in just 35 minutes.
               </p>
               <p className="kasauli-block-2__cta reveal" data-delay="0.25">
                 South Goa's tranquility stays with you long after the tide has turned. IRA Estates simply makes it your permanent address.
@@ -199,7 +201,7 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Amenities — massage (top row), steam + pickleball (bottom row); sized for ~one viewport */}
+        {/* Amenities — massage row on top; private concierge | steam bottom */}
         <section className="amenities-showcase" aria-labelledby="amenities-main-heading">
           <div className="amenities-showcase__inner container">
             <h2 id="amenities-main-heading" className="amenities-showcase__main-heading reveal" data-delay="0.02">Amenities</h2>
@@ -226,6 +228,23 @@ export default function Projects() {
               <figure className="amenities-showcase__dual">
                 <div className="amenities-showcase__dual-img-wrap reveal" data-delay="0.06">
                   <img
+                    src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1600&auto=format&fit=crop"
+                    alt="Private concierge and residential hospitality at IRA Estates"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption className="amenities-showcase__caption">
+                  <span className="eyebrow amenities-showcase__dual-eyebrow reveal" data-delay="0.09">Service</span>
+                  <span className="amenities-showcase__caption-label reveal" data-delay="0.1">Private concierge</span>
+                  <span className="amenities-showcase__caption-desc reveal" data-delay="0.14">
+                    Private chefs and chauffeur — just a call away. Crafted for a select few.
+                  </span>
+                </figcaption>
+              </figure>
+              <figure className="amenities-showcase__dual">
+                <div className="amenities-showcase__dual-img-wrap reveal" data-delay="0.06">
+                  <img
                     src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1778070324/steam_uvtwcq.png"
                     alt="Steam room interior with tiered benches"
                     loading="lazy"
@@ -235,20 +254,6 @@ export default function Projects() {
                 <figcaption className="amenities-showcase__caption">
                   <span className="amenities-showcase__caption-label reveal" data-delay="0.1">Steam room</span>
                   <span className="amenities-showcase__caption-desc reveal" data-delay="0.14">Heat and humidity to soothe muscles and deepen recovery.</span>
-                </figcaption>
-              </figure>
-              <figure className="amenities-showcase__dual">
-                <div className="amenities-showcase__dual-img-wrap reveal" data-delay="0.06">
-                  <img
-                    src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1778070550/oickel_ball_gygddh.png"
-                    alt="Outdoor pickleball court"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <figcaption className="amenities-showcase__caption">
-                  <span className="amenities-showcase__caption-label reveal" data-delay="0.1">Pickleball court</span>
-                  <span className="amenities-showcase__caption-desc reveal" data-delay="0.14">Resident play on a regulation surface, framed by landscaping.</span>
                 </figcaption>
               </figure>
             </div>
@@ -277,10 +282,9 @@ export default function Projects() {
           </div>
           <div className="gallery-stats container reveal">
             {[
-              { val: '2100', unit: ' sqm', label: 'Plot Size' },
-              { val: '4', unit: ' BHK', label: 'Bedrooms' },
+              { val: '4–5', unit: ' BHK', label: 'Bedrooms' },
               { val: '8', unit: ' Units', label: 'Exclusive Villas' },
-              { val: 'Ongoing', unit: '', label: 'Project Status' },
+              { val: 'Structure complete', unit: '', label: 'Project Status' },
             ].map((s, i) => (
               <React.Fragment key={s.label}>
                 {i > 0 && <div className="gallery-stat__divider" />}
@@ -338,13 +342,13 @@ export default function Projects() {
             <div className="specs-col">
               <h3 className="specs-col__heading reveal">Specifications</h3>
               <ul className="specs-col__list reveal" data-delay="0.05">
-                {['Jindal Steel structural framework', 'RCC framed earthquake-resistant structure', 'High plinth-levels with damp-proofing below ground floor', 'Waterproofing for terraces and pool decks', 'UPVC Fenesta double-glazed windows and doors', 'Legrand modular electrical switches and fittings', 'Kohler / Jaguar sanitaryware and CP fittings', 'Health faucets and frameless mirrors in all bathrooms', 'Ceramic wall tiles for kitchen with stainless steel sink', 'Built-in cabling for satellite TV and high-speed internet', 'Private swimming pool with deck — each villa', 'Individually landscaped gardens'].map(s => <li key={s}>{s}</li>)}
+                {['Jindal Steel structural framework', 'RCC framed earthquake-resistant structure', 'High plinth-levels with damp-proofing below ground floor', 'Waterproofing for terraces and pool decks', 'Indo-Portuguese aluminium windows with Georgian bars — double-glazed', 'Legrand modular electrical switches and fittings', 'Premium sanitaryware and CP fittings', 'Health faucets and frameless mirrors in all bathrooms', 'Masonry brickwork executed with rubble stone', 'Built-in cat cabling for satellite TV and high-speed internet',  'Private swimming pool with deck — each villa', 'Individually landscaped gardens'].map(s => <li key={s}>{s}</li>)}
               </ul>
             </div>
             <div className="specs-col">
               <h3 className="specs-col__heading reveal">Interiors</h3>
               <ul className="specs-col__list reveal" data-delay="0.05">
-                {['Modular kitchen with hob & chimney', 'Italian marble / premium stone flooring', 'Gypsum ceilings with decorative light fixtures', 'Ambient and mood lighting throughout', 'Glass partitions in bathrooms', 'Decorative wall finishes and feature walls', 'Handcrafted terrazzo accents', 'Tropical landscape design by specialists', 'Outdoor terrace furniture provision'].map(s => <li key={s}>{s}</li>)}
+                {['Premium floor design by a reputed Goan interior designer', 'A beautifully modular kitchen with installed hob & chimney', 'Gypsum ceilings with decorative light fixtures', 'Ambient and mood lighting throughout', 'Glass partitions in bathrooms', 'Decorative wall finishes and feature walls', 'Handcrafted terrazzo accents', 'Tropical landscape design by specialists', 'Outdoor terrace furniture provision'].map(s => <li key={s}>{s}</li>)}
               </ul>
             </div>
             <div className="specs-illus-col reveal" data-delay="0.1">
