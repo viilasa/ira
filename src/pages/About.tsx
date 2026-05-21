@@ -148,7 +148,7 @@ export default function About() {
             <div className="af-card reveal" data-delay="0.1">
               <div className="af-card__photo">
                 <img
-                  src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1779369950/IMG-20260521-WA0003_2_unxwtz.jpg"
+                  src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1779369690/IMG-20260521-WA0003_c2blbs.jpg"
                   alt="IRA Estates founders"
                   loading="lazy"
                   decoding="async"
