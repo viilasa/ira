@@ -228,7 +228,7 @@ export default function Projects() {
               <figure className="amenities-showcase__dual">
                 <div className="amenities-showcase__dual-img-wrap reveal" data-delay="0.06">
                   <img
-                    src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1600&auto=format&fit=crop"
+                    src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1779377195/create-an-ultra-detailed-luxury-interior-concierge_jt1ljo.png"
                     alt="Private concierge and residential hospitality at IRA Estates"
                     loading="lazy"
                     decoding="async"
