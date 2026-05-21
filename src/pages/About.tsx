@@ -142,16 +142,22 @@ export default function About() {
                 Born from vision.<br />Built with attention.
               </h2>
               <p className="about-founder-section__body reveal" data-delay="0.14">
-                IRA Estates was never just a company — it was a calling. Born from the vision of someone who believed that luxury should be quiet, craft should be considered, and the finest home is the one that knows exactly where it is.
+                Born from a deeply personal vision, it takes its name from my niece, Ira — a name that carries light, innocence, and new beginnings. What began as a desire to create something meaningful for family evolved into the core philosophy of the company: that luxury should be quiet, craft should be considered, and the finest homes are those that know exactly where they are.
               </p>
-              <p className="about-founder-section__note reveal" data-delay="0.2">
+              <p className="about-founder-section__body reveal" data-delay="0.17">
+                At the heart of IRA Estates lies a deep respect for the land. Every site is planned in harmony with nature, carefully following the natural contours of the terrain rather than forcing it into rigid geometry. The gentle imperfections of the landscape — its subtle rises, organic curves, and raw character — are embraced, never erased. This thoughtful approach ensures that each project feels rooted in its place, authentic, and alive with soul.
+              </p>
+              <p className="about-founder-section__body reveal" data-delay="0.2">
+                Here, architecture does not dominate nature. It listens to it.
+              </p>
+              <p className="about-founder-section__note reveal" data-delay="0.24">
                 — founders note by Raunak bhandari
               </p>
             </div>
             <div className="af-card reveal" data-delay="0.1">
               <div className="af-card__photo">
                 <img
-                  src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1779369950/IMG-20260521-WA0003_2_unxwtz.jpg"
+                  src="https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto,f_auto/v1779369690/IMG-20260521-WA0003_c2blbs.jpg"
                   alt="IRA Estates founders"
                   loading="lazy"
                   decoding="async"
