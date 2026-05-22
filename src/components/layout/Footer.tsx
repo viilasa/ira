@@ -38,7 +38,12 @@ export default function Footer() {
           Disclaimer: All renders, images, and specifications are indicative and subject to change at the sole discretion of IRA Estates. This communication does not constitute an offer or agreement of sale. Interested parties are advised to conduct their own due diligence.
         </p>
         <div className="footer-bottom__social">
-          <a href="#" aria-label="Instagram">
+          <a
+            href="https://www.instagram.com/iraestates?igsh=bGVlZmxiZnN6YzZ4"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               <rect x="2" y="2" width="20" height="20" rx="5" />
               <circle cx="12" cy="12" r="5" />
