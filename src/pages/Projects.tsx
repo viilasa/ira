@@ -22,13 +22,12 @@ function CustomPlayer({ videoId }: { videoId: string }) {
 }
 
 const gallerySlides = [
-  { src: 'https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775738313/Cameraview_8_entry_vwa0af.jpg', alt: 'Villa entry', type: 'Villa Type I', room: 'Entry Facade' },
-  { src: 'https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775738302/Cameraview_11_poolview_tdwton.jpg', alt: 'Villa pool', type: 'Villa Type I', room: 'Private Pool' },
-  { src: 'https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775738201/villa1_bedroom_ytznqw.jpg', alt: 'Villa bedroom', type: 'Villa Type II', room: 'Bedroom I' },
-  { src: 'https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775738201/villa1_living_yutwem.jpg', alt: 'Villa living', type: 'Villa Type II', room: 'Living Area' },
-  { src: 'https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775738201/villa1_dinning_koqrgr.jpg', alt: 'Villa dining', type: 'Villa Type II', room: 'Dining Room' },
-  { src: 'https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775738308/Cameraview_1_Night_sq1kwl.jpg', alt: 'Villa night', type: 'Villa Type I', room: 'Night View' },
-  { src: 'https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1775738315/Cameraview_9_a8qrge.jpg', alt: 'Villa exterior', type: 'Villa Type I', room: 'Exterior View' },
+  { src: 'https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1793021712/dht_tklhak.jpg', alt: 'Villa bedroom', type: 'Villa Interior', room: 'Bedroom I' },
+  { src: 'https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1793021711/jhyt_isnpx5.jpg', alt: 'Villa bedroom', type: 'Villa Interior', room: 'Bedroom II' },
+  { src: 'https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1793021711/b_ybtybb_lghq3l.jpg', alt: 'Villa living room', type: 'Villa Interior', room: 'Living Room I' },
+  { src: 'https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1793021711/hjkf_b5jme9.jpg', alt: 'Villa living room', type: 'Villa Interior', room: 'Living Room II' },
+  { src: 'https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1793021711/feuf_dmrggb.jpg', alt: 'Villa bedroom', type: 'Villa Interior', room: 'Bedroom III' },
+  { src: 'https://res.cloudinary.com/ddhhlkyut/image/upload/q_auto/f_auto/v1793021711/edhr_bzvyuf.jpg', alt: 'Villa bedroom', type: 'Villa Interior', room: 'Bedroom IV' },
 ]
 
 export default function Projects() {
